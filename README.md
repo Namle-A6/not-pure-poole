@@ -1,5 +1,5 @@
-# Not Pure Poole <!-- omit in toc -->
+# MathNoteBook
 
-Website: https://vszhub.github.io/not-pure-poole/ 
+Copyright (c) 2020 [vszhub](https://github.com/vszhub).
 
 Github: https://github.com/vszhub/not-pure-poole
