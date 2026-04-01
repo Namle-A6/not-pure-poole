@@ -9,7 +9,7 @@ toc:  true
 ---
 
 
-Dựa trên hai cuốn sách mà mình tự học là "Giáo trình: Nhập môn lý thuyết ma trận" và "Toán học cao cấp: Đại số và hình học giải tích". 
+Dựa trên hai cuốn sách mà mình tự học là "Giáo trình: Nhập môn lý thuyết ma trận" của Nhà xuất bản đại học sư phạm và "Toán học cao cấp: Đại số và hình học giải tích" của nhà xuất bản giáo dục Việt Nam. 
 
 ## 1. Lý thuyết tập hợp (hữu hạn)
 
