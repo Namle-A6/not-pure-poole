@@ -147,7 +147,16 @@ Vì ánh xạ \\\(f: [0;\infty] \to [0;\infty], x \to x^2\\\) vừa là **đơn 
 
 ## 3. Số phức 
 
-. . .
+**Định nghĩa 3.1**: 
+
+\\\(
+   \begin{theorem}
+      Số phức là một biểu thức có dạng 
+      $$z = a +bi$$
+      trong đó \\\(a, b \in \mathbb{R}\\\), và \\\(i \\\) là một kí hiệu gọi là đơn vị ảo.
+   \end{theorem}
+   \\\)
+
 
 *** 
 
