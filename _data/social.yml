@@ -1,9 +1,12 @@
 - title: Email
-  url: mailto://vszhub@gmail.com
+  url: mailto://nguyenlenam15082007@gmail.com
   icon: fas fa-envelope
-- title: Twitter
-  url: https://twitter.com/vszhub
-  icon: fab fa-twitter
+- title: Facebook
+  url: https://www.facebook.com/nguyen.le.nam.964512
+  icon: fab fa-facebook-f
 - title: GitHub
-  url: https://github.com/vszhub/not-pure-poole
+  url: https://github.com/Namle-A6?tab=repositories
   icon: fab fa-github
+- title: Blog
+  url: https://namle-a6.github.io/Namleteblog.github.io/
+  icon: fa-solid fa-blog
