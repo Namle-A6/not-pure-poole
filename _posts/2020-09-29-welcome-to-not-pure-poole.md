@@ -4,6 +4,7 @@ title: Welcome to Not Pure Poole
 date: 2020-09-29 23:18 +0800
 last_modified_at: 2020-10-01 01:08:25 +0800
 tags: [tutorial]
+feature-img: ./_posts/images/jazz in anime.jpg
 toc:  true
 ---
 Welcome to **Not Pure Poole**! This is an example post to show the layout.
@@ -123,8 +124,8 @@ Align to the center by adding `class="align-center"`:
 ![placeholder](http://placehold.it/400x200 "Medium example image"){: .align-center}
 
 <div class="post-image">
-    <a href="/images/jazz in anime.png" data-lightbox="rl2" data-title="">
-        <img src="/images/jazz in anime.png">
+    <a href="./images/jazz in anime.jpg" data-lightbox="rl2" data-title="">
+        <img src="./images/jazz in anime.jpg">
     </a>
     <p class="post-image-caption"></p>
 </div>
