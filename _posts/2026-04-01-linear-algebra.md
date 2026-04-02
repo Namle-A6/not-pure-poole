@@ -161,7 +161,7 @@ Tập hợp các số phức được kí hiệu là \\\(\mathbb{C}\\\)
 
 **Ví dụ 3.2**: Cho \\\(z = 10\\\) là một số phức, có phần thực là \\\(\operatorname{Re}(z) = 10\\\) và có phần ảo là \\\(\operatorname{Im}(z) = 0\\\)
 
-Từ **ví dụ 3.2** trên, ta thấy rằng, mỗi số thực \\\(a\\\) được đồng nhất bởi số phức \\\(a + 0.i\\\). Như vậy, ta có bao hàm thức giữa các tập hợp số như sau: 
+Từ **ví dụ 3.2** trên, ta thấy rằng, mỗi số thực \\\(a\\\) được đồng nhất bởi số phức \\\(a + 0.i\\\), với \\\(a \in \mathbb{R}\\\). Như vậy, ta có bao hàm thức giữa các tập hợp số như sau: 
 
 $$\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R} \subset \mathbb{C}$$
 
@@ -186,17 +186,18 @@ $$\begin{cases}
 
 > Số phức \\\(\bar{z} = a - b.i\\\) được gọi là số phức liên hợp của số phức \\\(z = a + b.i\\\) với phần thực của số phức liên hợp là \\\(\operatorname{Re}(z) = a\\\) và phần ảo của số phức liên hợp là \\\(\operatorname{Im}(z) = -b\\\). 
 
-**Ví dụ 3.6**: Cho số phức \\\(\z_1 = 3 + 4.i\\\): 
+**Ví dụ 3.6**: Cho số phức \\\(z_1 = 3 + 4.i\\\): 
 
-Ta được số phức liên hợp từ số phức \\\(z_1\\\): \\\(\overline(z_1) = 3 - 4.i\\\)
+Ta được số phức liên hợp từ số phức \\\(z_1\\\): \\\(\overline{z_1} = 3 - 4.i\\\)
 
 **Định nghĩa 3.7 (mô đun số phức)**: Cho số phức \\\(z = a + b.i\\\) với \\\(a, b \in \mathbb{R}\\\):
 
-> Số thực không âm \\\(|z|\\\) = \sqrt{a^2 + b^2} được gọi là mô đun của số phức \\\(z\\\)
+> Số thực không âm \\\(\lvert z \lvert = \sqrt{a^2 + b^2}\\\) được gọi là mô đun của số phức \\\(z\\\)
 
-Lấy lại **ví dụ 3.6** trên, ta được mô đun của số phức \\\(z_1\\\) là \\\(|z| = \sqrt{3^2 + 4^2} = 5\\\). 
+Lấy lại **ví dụ 3.6** trên, ta được mô đun của số phức \\\(z_1\\\) là \\\(\lvert z \lvert = \sqrt{3^2 + 4^2} = 5\\\). 
 
-Mô đun của số phức liên hợp từ số phức \\\(z_1\\\) là \\\(\overline{z_1}\\\) cũng bằng 5 (= \\\(\sqrt{3^2 + (-4)^2}\\\)).
+Mô đun của số phức liên hợp từ số phức \\\(z_1\\\) là \\\(\lvert \overline{z_1} \lvert\\\) cũng bằng 5 (= \\\(\sqrt{3^2 + (-4)^2}\\\)).
+
 *** 
 
 ## 4. Ma trận 
