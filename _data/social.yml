@@ -1,6 +1,6 @@
-- title: Email
-  url: mailto://nguyenlenam15082007@gmail.com
-  icon: fas fa-envelope
+- title: Blog
+  url: https://namle-a6.github.io/Namleteblog.github.io/
+  icon: fab fa-blog
 - title: Facebook
   url: https://www.facebook.com/nguyen.le.nam.964512
   icon: fab fa-facebook-f
