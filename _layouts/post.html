@@ -34,32 +34,7 @@ layout: default
   {% if jekyll.environment == "production" and site.disqus and page.comments != false %}
     {% include disqus.html %}
   {% endif %}
-  <section class="wrapper style1 align-center">
-        <div class="inner">
-                {% if page.feature-img %}
-                <div class="post-image-feature">
-                    <img class="feature-image" src="{{ site.url }}{{ page.feature-img }}" alt>
-                </div>
-                {% endif %}
-                {{ content }}
-            </div>
-        </div>
-  </section>
 </article>
-
-<div id="wrapper">
-    <section class="wrapper style1 align-center">
-        <div class="inner">
-            <div class="align-left">
-                <div class="post-image-feature">
-                    <img class="feature-image" src="{{ site.url }}{{ page.feature-img }}" alt>
-                </div>
-                {% endif %}
-            </div>
-        </div>
-    </section>
-</div>
-
 
 {% if site.related_posts != empty %}
 <aside class="related">

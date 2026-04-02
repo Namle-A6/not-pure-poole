@@ -123,13 +123,6 @@ Align to the center by adding `class="align-center"`:
 
 ![placeholder](http://placehold.it/400x200 "Medium example image"){: .align-center}
 
-<div class="post-image">
-    <a href="./images/jazz in anime.jpg" data-lightbox="rl2" data-title="">
-        <img src="./images/jazz in anime.jpg">
-    </a>
-    <p class="post-image-caption"></p>
-</div>
-
 ### Tables
 
 Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
