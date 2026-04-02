@@ -226,19 +226,18 @@ $$
 
 **Ví dụ 5.2**: Cho một ma trận vuông cỡ 2 \\\(\times\\\) 2. Ma trận vuông 2 \\\(\times\\\) 2 này có 2! = 2 phép thế cấp 2, đó là 
 
-\\\(\sigma(1) = 
+$$\sigma(1) = 
 \begin{pmatrix}
    1 & 2\\
    1 & 2
 \end{pmatrix} 
-\\\) 
 ;
-\\\(\sigma(2) =
+\sigma(2) =
 \begin{pmatrix}
    1 & 2 \\
    2 & 1
 \end{pmatrix} 
-\\\)
+$$
 
 **Định nghĩa 5.3 (dấu phép thế)**:   
 
