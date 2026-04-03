@@ -295,15 +295,15 @@ Từ **định nghĩa 5.3** về dấu của phép thế trên, ta có một cá
 
 **Định nghĩa 5.5**: Cho \\\(f: X \to X\\\) là phép thế cấp n, với \\\(X\\\) = {1, 2, ..., n}: 
 
-> (i) Cặp \\\((\sigma_i, \sigma_j)\\\) với \\\(1 \le i < j \le n\\\) được gọi là nghịch thế nếu \\\(\sigma_i > \sigma_j\\\)
+> (i) Cặp \\\((\sigma(i), \sigma(j))\\\) với \\\(1 \le i < j \le n\\\) được gọi là nghịch thế nếu \\\(\sigma(i) > \sigma(j)\\\)
 
-> (ii) Nếu cặp \\\((\sigma_i, \sigma_j)\\\) có số lượng nghịch thế là chẵn, thì phép thế \\\(\sigma\\\) được gọi là phép thế ***chẵn*** và ta có được dấu phép thế \\\(\operatorname{sgn}(\sigma) = 1\\\). Còn nếu cặp \\\((\sigma_i, \sigma_j)\\\) có số lượng nghịch thế là lẻ, thì phép thế \\\(\sigma\\\) được gọi là phép thế ***lẻ*** và ta có được dấu phép thế \\\(\operatorname{sgn}(\sigma) = -1\\\). 
+> (ii) Nếu cặp \\\((\sigma(i), \sigma(j))\\\) có số lượng nghịch thế là chẵn, thì phép thế \\\(\sigma\\\) được gọi là phép thế ***chẵn*** và ta có được dấu phép thế \\\(\operatorname{sgn}(\sigma) = 1\\\). Còn nếu cặp \\\((\sigma(i), \sigma(j))\\\) có số lượng nghịch thế là lẻ, thì phép thế \\\(\sigma\\\) được gọi là phép thế ***lẻ*** và ta có được dấu phép thế \\\(\operatorname{sgn}(\sigma) = -1\\\). 
 
 Áp dụng **định nghĩa 5.5** vào lại **ví dụ 5.4** trên ta được: 
 
-\\\((\sigma_i, \sigma_j)\\\) = {(5,4); (5,1); (5,2); (5,3); (4,2); (4,3)}
+\\\((\sigma(i), \sigma(j))\\\) = {(5,4); (5,1); (5,2); (5,3); (4,2); (4,3)}
 
-Vì cặp \\\((\sigma_i, \sigma_j)\\\) có số lượng nghịch thế là chẵn, nên theo **(ii)** của **định nghĩa 5.5**, phép thế \\\(\sigma\\\) là phép thế chẵn, có dấu của phép thế \\\(sgn(\sigma) = 1\\\).
+Vì cặp \\\((\sigma(i), \sigma(j))\\\) có số lượng nghịch thế là chẵn, nên theo **(ii)** của **định nghĩa 5.5**, phép thế \\\(\sigma\\\) là phép thế chẵn, có dấu của phép thế \\\(sgn(\sigma) = 1\\\).
 
 ## 6. Định thức
 
@@ -321,7 +321,7 @@ $$
 
 trong đó tổng ở vế phải được lấy trên tập \\\(S_n\\\) tất cả các phép thế \\\(\sigma\\\) cấp n.
 
-**Ví dụ 6.2**: Tính định thức cấp 3 của ma trận vuông cấp 3 sau: 
+**Ví dụ 6.2**: Tìm định thức cấp 3 của ma trận vuông cấp 3 sau: 
 
 $$
 B = \begin{bmatrix}
@@ -428,7 +428,7 @@ $$
 
 &\quad + \left[ \operatorname{sgn}(\sigma_3) a_{1\sigma_1} a_{2\sigma_2} a_{3\sigma_3} \right] + \left[ \operatorname{sgn}(\sigma_4) a_{1\sigma_1} a_{2\sigma_2} a_{3\sigma_3} \right]\\
 
-&\quad + \left[ \operatorname{sgn}(\sigma_5) a_{1\sigma_1} a_{2\sigma_2} a_{3\sigma_2} \right] + \left[ \operatorname{sgn}(\sigma_6) a_{1\sigma_1} a_{2\sigma_2} a_{3\sigma_3} \right]\\
+&\quad + \left[ \operatorname{sgn}(\sigma_5) a_{1\sigma_1} a_{2\sigma_2} a_{3\sigma_3} \right] + \left[ \operatorname{sgn}(\sigma_6) a_{1\sigma_1} a_{2\sigma_2} a_{3\sigma_3} \right]\\
 
 \\
 
