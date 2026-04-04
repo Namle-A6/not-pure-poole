@@ -452,9 +452,6 @@ $$
 det(B) =  (a_{11}.a_{22}.a_{33} + a_{12}.a_{23}.a_{31} + a_{13}.a_{21}.a_{32}) - (a_{11}.a_{23}.a_{32} + a_{12}.a_{21}.a_{33} + a_{13}.a_{22}.a_{31})
 $$
 
-$$
-det(B) =  (a_{11}.a_{22}.a_{33} + a_{12}.a_{23}.a_{31} + a_{13}.a_{21}.a_{32}) - (a_{11}.a_{23}.a_{32} + a_{12}.a_{21}.a_{33} + a_{13}.a_{22}.a_{31})
-$$
 
 Tuy vậy với định thức cấp \\\(n\\\) có số \\\(n\\\) lớn hơn 3 mà ta đã xét ở **ví dụ 6.2** trên. Chẳng hạn với \\\(n\\\) = 4, khi ta xét dấu của phép thế cấp 4 thì phải xét tới \\\(4! = 16\\\) phép thế khác nhau. Điều này sẽ càng gia tăng với \\\(5! = 120\\\), \\\(6! = 720\\\) ...vv...
 
@@ -468,7 +465,8 @@ Một cách khác để tìm được định thức nhằm khắc phục hạn 
 
 Để bắt đầu với phần này, ta cần phải hiểu về phần bù đại số. 
 
-**Định nghĩa 7.1**: Cho \\\(A = (a_{ij})_{n \times n}\\\) là một ma trận vuông cấp \\\(n\\\), với \\\(1 \le i < j \le n\\\). Khi đó phần bù đại số của phần tử \\\(a_{ij}\\\), được cho bởi: 
+**Định nghĩa 7.1**: Cho \\\(A = (a_{ij})_{n \times n}\\\) là một ma trận vuông cấp \\\(n\\\), với \\\(1 \le i < j \le n\\\). 
+Khi đó phần bù đại số của phần tử \\\(a_{ij}\\\), được cho bởi: 
 
 > $$A_{ij} = (-1)^{i + j} \cdot M_{ij}$$
 
@@ -477,6 +475,7 @@ trong đó:
 + \\\(M_{ij}\\\) là định thức của một ma trận vuông cấp \\\(n - 1\\\), nhận được từ ma trận \\\(A\\\) bằng cách bỏ đi dòng thứ \\\(i\\\) và cột thứ \\\(j\\\). 
 
 **Ví dụ 7.2**: Cho một ma trận \\\(3 \times 3\\\) sau: 
+
 $$
 B = \begin{bmatrix}
     1 & 2 & 3 \\
@@ -487,13 +486,13 @@ $$
 
 Tính phần bù đại số của phần tử \\\(a_{23}\\\). 
 
-Để tính được phần bù đại số của phần tử \\\(a_23\\\), áp dụng công thức từ **Định nghĩa 7.1** trên ta được: 
+Để tính được phần bù đại số của phần tử \\\(a_{23}\\\), áp dụng công thức từ **Định nghĩa 7.1** trên ta được: 
 
 $$
 B_{23} = (-1)^{2+3}.M_{23}
 $$
 
-trong đó \\\(M_{23}\\\) là định thức một ma trận vuông cấp 2, nhận được từ ma trận \\\(B\\\) bằng cách bỏ đi dòng thứ 2 \\\(i = 2\\\) và cột thứ 3 \\\(j = 3\\\), lúc này phần bù đại số của phần tử \\\(a_{23}\\\): 
+trong đó \\\(M_{23}\\\) là định thức của một ma trận vuông cấp 2, nhận được từ ma trận \\\(B\\\), bằng cách bỏ đi dòng thứ 2 \\\((i = 2)\\\) và cột thứ 3 \\\((j = 3)\\\), lúc này phần bù đại số của phần tử \\\(a_{23}\\\): 
 
 $$
 \begin{equation}
@@ -502,29 +501,37 @@ B_{23} &= (-1)^{2+3} \cdot \begin{vmatrix}
     1 & 2 \\
     7 & 8 
 \end{vmatrix} \\
+
+\\
+
 &= (-1) \cdot (1 \cdot 8 - 2 \cdot 7) \\
+
+\\
+
 &= (-1) \cdot (8 - 14) = 6
 \end{aligned}
 \end{equation}
 $$
 
-Từ đây, ta có thể tính được định thức của một ma trận từ các phần bù đại số của các phần tử thuộc cùng một dòng hoặc cùng một cột của ma trận thông qua định lý về khai triển Laplace sau. 
+Vậy phần bù đại số của phần tử \\\(a_{23}\\\) là bằng 6.
+
+Từ đây, ta có thể tính được định thức của một ma trận từ các phần bù đại số của các phần tử thuộc cùng một dòng hoặc cùng một cột của ma trận thông qua định lý về **khai triển Laplace** sau. 
 
 **Định lý 7.3 (khai triển Laplace)**: Cho \\\(A = (a_{ij})_{n \times n}\\\) là một ma trận vuông cấp \\\(n\\\), với \\\(1 \le i < j \le n\\\): 
 
-> (i) **(Khai triển Laplace theo dòng thứ i)**: Với mỗi \\\(i \in \{ 1, \dots ,n\}\\\) cố định ta có: 
+> (i) **(Khai triển Laplace theo dòng thứ i)**: Với mỗi \\\(i \in \{{1, \dots ,n}\}\\\) cố định ta có: 
 
 $$
 \det(A) = \sum_{k=1}^{n} a_{ik} A_{ik} = \sum_{k=1}^{n} a_{ik} (-1)^{i + k} M_{ik}
 $$
 
-> (ii) **(Khai triển Laplace theo cột thứ j)**: Với mỗi \\\(i \in \{ 1, \dots ,n\}\\\) cố định ta có: 
+> (ii) **(Khai triển Laplace theo cột thứ j)**: Với mỗi \\\(i \in \{{1, \dots ,n\}}\\\) cố định ta có: 
 
 $$
 det(A) = \sum_{k=1}^{n} a_{kj} A_{kj} = \sum_{k=1}^{n} a_{kj} (-1)^{k + j} M_{kj}
 $$
 
-**Ví dụ 7.4**: Tìm định thức của ma trận vuông \\\(3 \times 3\\\) từ **Ví dụ 6.2** bằng cách sử dụng khai triển Laplace theo dòng hoặc cột.
+**Ví dụ 7.4**: Tìm định thức của ma trận vuông cấp 3 từ **Ví dụ 6.2**, bằng cách sử dụng **khai triển Laplace** theo dòng hoặc cột.
 
 Ta có ma trận vuông \\\(3 \times 3\\\) 
 
@@ -536,7 +543,7 @@ B = \begin{bmatrix}
 \end{bmatrix}
 $$
 
-***Cách 1***: Khai triển Laplace theo dòng thứ 1, bằng cách áp dụng công thức từ (i) của **Định lý 7.3** ta được.  
+***Cách 1***: **Khai triển Laplace** theo dòng thứ 1, bằng cách áp dụng công thức từ (i) của **Định lý 7.3** ta được.  
 
 $$
 \begin{equation}
@@ -550,31 +557,26 @@ $$
 \\ 
 
 &= a_{11} (-1)^{1+1} \begin{vmatrix} a_{22} & a_{23} \\ a_{32} & a_{33} \end{vmatrix} 
-   + a_{12} (-1)^{1+2} \begin{vmatrix} a_{21} & a_{23} \\ a_{31} & a_{33} \end{vmatrix} \\
-&\quad + a_{13} (-1)^{1+3} \begin{vmatrix} a_{21} & a_{22} \\ a_{31} & a_{32} \end{vmatrix} \\
+   + a_{12} (-1)^{1+2} \begin{vmatrix} a_{21} & a_{23} \\ a_{31} & a_{33} \end{vmatrix} + a_{13} (-1)^{1+3} \begin{vmatrix} a_{21} & a_{22} \\ a_{31} & a_{32} \end{vmatrix} \\
 
 \\
 
-&= \left[ a_{11} (a_{22} a_{33} - a_{23} a_{32}) \right] - \left[ a_{12} (a_{21} a_{33} - a_{23} a_{31}) \right] \\
-
-&\quad + \left[ a_{13} (a_{21} a_{32} - a_{22} a_{31}) \right] \\
+&= \left[ a_{11} (a_{22} a_{33} - a_{23} a_{32}) \right] - \left[ a_{12} (a_{21} a_{33} - a_{23} a_{31}) \right] + \left[ a_{13} (a_{21} a_{32} - a_{22} a_{31}) \right] \\
 
 \\
 
-&= (a_{11} a_{22} a_{33} + a_{12} a_{23} a_{31} + a_{13} a_{21} a_{32}) \\
-
-&\quad - (a_{11} a_{23} a_{32} + a_{12} a_{21} a_{33} + a_{13} a_{22} a_{31})
+&= (a_{11} a_{22} a_{33} + a_{12} a_{23} a_{31} + a_{13} a_{21} a_{32}) - (a_{11} a_{23} a_{32} + a_{12} a_{21} a_{33} + a_{13} a_{22} a_{31})
 \end{aligned}
 \end{equation}
 $$
 
-Như vậy bằng cách khai triển Laplace theo dòng thứ 1 từ ma trận vuông cấp 3, định thức cấp 3 có được là: 
+Như vậy bằng cách **khai triển Laplace** theo dòng thứ 1 từ ma trận vuông cấp 3, định thức cấp 3 có được là: 
 
 $$
 det(B) =  (a_{11}.a_{22}.a_{33} + a_{12}.a_{23}.a_{31} + a_{13}.a_{21}.a_{32}) - (a_{11}.a_{23}.a_{32} + a_{12}.a_{21}.a_{33} + a_{13}.a_{22}.a_{31})
 $$
 
-***Cách 2***: Khai triển Laplace theo cột thứ 2, bằng cách áp dụng công thức từ (ii) của **Định lý 7.3** ta được.  
+***Cách 2***: **Khai triển Laplace** theo cột thứ 2, bằng cách áp dụng công thức từ (ii) của **Định lý 7.3** ta được.  
 
 $$
 \begin{equation}
@@ -588,25 +590,20 @@ $$
 \\ 
 
 &= a_{12} (-1)^{1 + 2} \begin{vmatrix} a_{21} & a_{23} \\ a_{31} & a_{33} \end{vmatrix} 
-   + a_{22} (-1)^{2 + 2} \begin{vmatrix} a_{11} & a_{13} \\ a_{31} & a_{33} \end{vmatrix} \\
-&\quad + a_{32} (-1)^{3 + 2} \begin{vmatrix} a_{11} & a_{21} \\ a_{13} & a_{23} \end{vmatrix} \\
+   + a_{22} (-1)^{2 + 2} \begin{vmatrix} a_{11} & a_{13} \\ a_{31} & a_{33} \end{vmatrix} + a_{32} (-1)^{3 + 2} \begin{vmatrix} a_{11} & a_{21} \\ a_{13} & a_{23} \end{vmatrix} \\
 
 \\
 
-&= \left(-1) \cdot [ a_{12} (a_{21} a_{33} - a_{23} a_{31}) \right] + \left[ a_{22} (a_{11} a_{33} - a_{13} a_{31}) \right] \\
-
-&\quad + \left (-1) \cdot [ a_{32} (a_{11} a_{23} - a_{21} a_{13}) \right] \\
+&= \left(-1) \cdot [ a_{12} (a_{21} a_{33} - a_{23} a_{31}) \right] + \left[ a_{22} (a_{11} a_{33} - a_{13} a_{31}) \right] + \left (-1) \cdot [ a_{32} (a_{11} a_{23} - a_{21} a_{13}) \right] \\
 
 \\
 
-&= (a_{11} a_{22} a_{33} + a_{12} a_{23} a_{31} + a_{13} a_{21} a_{32}) \\
-
-&\quad - (a_{11} a_{23} a_{32} + a_{12} a_{21} a_{33} + a_{13} a_{22} a_{31})
+&= (a_{11} a_{22} a_{33} + a_{12} a_{23} a_{31} + a_{13} a_{21} a_{32}) - (a_{11} a_{23} a_{32} + a_{12} a_{21} a_{33} + a_{13} a_{22} a_{31})
 \end{aligned}
 \end{equation}
 $$
 
-Như vậy bằng cách khai triển Laplace theo cột thứ 2 từ ma trận vuông cấp 3, định thức cấp 3 có được cũng là: 
+Như vậy bằng cách **khai triển Laplace** theo cột thứ 2 từ ma trận vuông cấp 3, định thức cấp 3 có được cũng là: 
 
 $$
 det(B) =  (a_{11}.a_{22}.a_{33} + a_{12}.a_{23}.a_{31} + a_{13}.a_{21}.a_{32}) - (a_{11}.a_{23}.a_{32} + a_{12}.a_{21}.a_{33} + a_{13}.a_{22}.a_{31})
