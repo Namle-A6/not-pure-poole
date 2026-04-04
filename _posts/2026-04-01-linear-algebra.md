@@ -101,7 +101,7 @@ Từ **định nghĩa 2.1** về ánh xạ, ta có các khái niệm về đơn 
 
 > (i) Ánh xạ *f* được gọi là ***đơn ánh*** nếu \\\(\forall x_1, x_2 \in X, x_1 \ne x_2\\\) kéo theo \\\(f(x_1) \ne f(x_2)\\\). Điều đó tương đương với: \\\(\forall x_1, x_2 \in X, f(x_1) = f(x_2)\\\) kéo theo \\\(x_1 = x_2\\\)
 
-> (ii) Ánh xạ *f* được gọi là ***toàn ánh*** nếu \\\(f(x) = y\\\), nghĩa là \\\(\forally \in Y\\\), \\\(\exists x \in X\\\) sao cho \\\(y =f(x)\\\). 
+> (ii) Ánh xạ *f* được gọi là ***toàn ánh*** nếu \\\(f(x) = y\\\), nghĩa là \\\(\forall \in Y\\\), \\\(\exists x \in X\\\) sao cho \\\(y =f(x)\\\). 
 
 > (iii) Ánh xạ *f* được gọi là ***song ánh*** nếu ánh xạ *f* vừa là ***đơn ánh*** và đồng thời cũng là ***toàn ánh***.
 
@@ -697,5 +697,4 @@ Phần này tự áp dụng công thức rồi tính toán như ***cách 1*** tr
 
 ## 10. Hệ phương trình tuyến tính
 
-. . .
-
+. . . 
