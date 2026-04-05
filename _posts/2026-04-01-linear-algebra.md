@@ -196,11 +196,13 @@ Lấy lại **ví dụ 3.6** trên, ta tìm được mô đun của số phức 
 
 Mô đun của số phức liên hợp từ số phức \\\(z_1\\\) là \\\(\lvert \overline{z_1} \lvert\\\) cũng bằng 5 (= \\\(\sqrt{3^2 + (-4)^2}\\\)).
 
+. . .
+
 *** 
 
 ## 4. Ma trận 
 
-**Định nghĩa 4.1**: Một ma trận có kích thước \\\(m \times n\\\) là một bảng số hình chữ nhật  gồm *m* hàng và *n* cột có dạng: 
+**Định nghĩa 4.1**: Một ma trận có kích thước \\\(m \times n\\\) là một bảng số hình chữ nhật  gồm *m* hàng và *n* cột (\\\(m,n \in \mathbb{N}\\\)) có dạng: 
 
 $$
 \begin{bmatrix}
@@ -217,7 +219,7 @@ Nếu tất cả các phần tử \\\(a_{ij} \in \mathbb{R}\\\), thì ta gọi m
 
 Kí hiệu ma trận: \\\(A = (a_{ij})_{m \times n }\\\)
 
-**Ví dụ 4.2** Cho một ma trận \\\(B\\\)sau: 
+**Ví dụ 4.2** Cho một ma trận \\\(B\\\) sau: 
 
 $$
 B = \begin{bmatrix}
@@ -226,7 +228,7 @@ B = \begin{bmatrix}
 \end{bmatrix}
 $$
 
-Ta thấy ma trận \\\(B\\\) trên là một ma trận có kích thước là \\\(2 \times 3\\\). Có các phần tử lần lượt là \\\(a_{11} = 1, a_{12} = 2, a_{13} = \sqrt{2}, a_{21} = 4, a_{22} = 8, a_{23} = 10\\\) đều thuộc tập \\\(\mathbb{R}\\\), nên ma trận \\\(B\\\) còn được gọi là ma trận thực.
+Ta thấy ma trận \\\(B\\\) trên là một ma trận có kích thước là \\\(2 \times 3\\\). Có các phần tử lần lượt là \\\(a_{11} = 1\\\), \\\(a_{12} = 2\\\), \\\(a_{13} = \sqrt{2}\\\), \\\(a_{21} = 4\\\), \\\(a_{22} = 8\\\), \\\(a_{23} = 10\\\) đều thuộc tập \\\(\mathbb{R}\\\), nên ma trận \\\(B\\\) còn được gọi là ma trận thực.
 
 Kí hiệu ma trận \\\(B = (a_{ij})_{2 \times 3 }\\\). 
 
@@ -243,7 +245,7 @@ $$
 \end{pmatrix}
 $$
 
-+ Ma trận thực có kích thước \\\(m \times n\\\), còn được kí hiệu là \\\(M_{m \times n}(\mathbb{R})) hoặc \\\(\mathbb{R}^{m \times n}\\\). Ma trận phức có kích thước \\\(m \times n\\\), còn được kí hiệu là \\\(M_{m \times n}(\mathbb{C})) hoặc \\\(\mathbb{C}^{m \times n}\\\)
++ Ma trận thực có kích thước \\\(m \times n\\\), còn được kí hiệu là \\\(M_{m \times n}(\mathbb{R})\\\) hoặc \\\(\mathbb{R}^{m \times n}\\\). Ma trận phức có kích thước \\\(m \times n\\\), còn được kí hiệu là \\\(M_{m \times n}(\mathbb{C})\\\) hoặc \\\(\mathbb{C}^{m \times n}\\\)
 
 + Ma trận có kích thước \\\(n\times n\\\), tức là số dòng bằng số cột, được gọi là ma trận vuông cấp \\\(n\\\). Kí hiệu là \\\(A = (a_{ij})_{n \times n}\\\). 
 
@@ -338,13 +340,47 @@ $$
 
 ma trận nào trong đây là ma trận vuông, ma trận dòng, ma trận cột và xác định các giá trị phần tử của ma trận đó. 
 
-Ta thấy ma trận \\\(A\\\) có kích thước là \\\(4 \times 1\\\), nên đây là ma trận cột, có các phần tử là \\\(a_{11} = 1, a_{21} = 2, a_{31} = 3, a_{41} = 4.\\\)
+Ta thấy ma trận \\\(A\\\) có kích thước là \\\(4 \times 1\\\), nên đây là ma trận cột, có các phần tử là \\\(a_{11} = 1\\\), \\\(a_{21} = 2\\\), \\\(a_{31} = 3\\\), \\\(a_{41} = 4.\\\)
 
-Tương tự ta có ma trận \\\(B\\\) có kích thước là \\\(2 \times 2\\\), nên đây là ma trận vuông cấp 2, có các phần tử là \\\(a_{11} = 5, a_{12} = 6, a_{21} = 7, a_{22} = 8\\\)
+Tương tự ta có ma trận \\\(B\\\) có kích thước là \\\(2 \times 2\\\), nên đây là ma trận vuông cấp 2, có các phần tử là \\\(a_{11} = 5\\\), \\\(a_{12} = 6\\\), \\\(a_{21} = 7\\\), \\\(a_{22} = 8\\\)
 
-Ma trận \\\(C\\\) có kích thước là \\\(1 \ times 4\\\), nên đây là ma trận dòng, có các phần tử là \\\(a_{11} = 9, a_{12} = 10, a_{13} = 11, a_{14} = 12\\\)
+Ma trận \\\(C\\\) có kích thước là \\\(1 \times 4\\\), nên đây là ma trận dòng, có các phần tử là \\\(a_{11} = 9\\\), \\\(a_{12} = 10\\\), \\\(a_{13} = 11\\\), \\\(a_{14} = 12\\\)
+
+**Định nghĩa 4.5 (hai ma trận bằng nhau)**: Hai ma trận A và B được gọi là bằng nhau (kí hiệu \\\(A = B\\\)) nếu và chỉ nếu thỏa mãn hai điều kiện sau: 
+
++ Hai ma trận *A* và *B* đều có cùng kích thước.
+
++ Mỗi phần tử của ma trận *A* tương ứng với mỗi phần tử của ma trận *B* là bằng nhau.
+
+**Ví dụ 4.6**: Cho hai ma trận vuông cấp 2 
+
+$$
+A = \begin{bmatrix}
+1 & x \\
+y & 2 
+\end{bmatrix}
+;
+B = \begin{bmatrix}
+u & 0 \\
+-5 & v
+\end{bmatrix}
+$$
+
+hai ma trận *A* và *B* bằng nhau, nghĩa là \\\(A = B\\\), nếu và chỉ nếu: 
+
+$$
+\begin{cases}
+u = 1 \\
+x = 0 \\
+y = -5 \\
+v = 2 \\
+\end{cases}
+$$
 
 Tiếp theo, ta cùng tìm hiểu về một số loại ma trận đặc biệt quan trọng mà ta thường bắt gặp ở các phần bài học tiếp theo trong bộ môn đại số tuyến tính. 
+
+
+. . .
 
 *** 
 
@@ -474,6 +510,8 @@ $$
 
 trong đó tổng ở vế phải được lấy trên tập \\\(S_n\\\) tất cả các phép thế \\\(\sigma\\\) cấp n.
 
+Công thức tính định thức từ **định nghĩa 6.1** trên, còn được gọi là công thức Leibniz. 
+
 **Ví dụ 6.2**: Tìm định thức cấp 3 của ma trận vuông cấp 3 sau: 
 
 $$
@@ -541,10 +579,12 @@ $$\sigma_2 = \begin{pmatrix}
     1 & 2 & 3 \\
     1 & 3 & 2 \\
 \end{pmatrix};
+
 \sigma_3 = \begin{pmatrix}
     1 & 2 & 3 \\
     2 & 1 & 3 \\
 \end{pmatrix};
+
 \sigma_4 = \begin{pmatrix}
     1 & 2 & 3 \\
     2 & 3 & 1 \\
@@ -556,6 +596,7 @@ $$
     1 & 2 & 3 \\
     3 & 1 & 2 \\
 \end{pmatrix};
+
 \sigma_6 = \begin{pmatrix}
     1 & 2 & 3 \\
     3 & 2 & 1 \\
@@ -614,7 +655,7 @@ Một cách khác để tìm được định thức nhằm khắc phục hạn 
 
 Để bắt đầu với phần này, ta cần phải hiểu về phần bù đại số. 
 
-**Định nghĩa 7.1**: Cho \\\(A = (a_{ij})_{n \times n}\\\) là một ma trận vuông cấp \\\(n\\\), với \\\(1 \le i < j \le n\\\).
+**Định nghĩa 7.1 (phần bù đại số)**: Cho \\\(A = (a_{ij})_{n \times n}\\\) là một ma trận vuông cấp \\\(n\\\), với \\\(1 \le i < j \le n\\\).
 
 Khi đó phần bù đại số của phần tử \\\(a_{ij}\\\), được cho bởi: 
 
@@ -782,9 +823,11 @@ trong đó:
 + \\\( (-1)^{i_{1} + \dots + i_{k} + j_{1} + \dots + j_{k}} \overline{D}_{i_{1} \dots i_{k}}^{j_{1} \dots j_{k}} \\\) là phần bù đại số của \\\(D_{i_{1} \dots i_{k}}^{j_{1} \dots j_{k}} \\\). Với \\\(\overline{D}_{i_{1} \dots i_{k}}^{j_{1} \dots j_{k}}\\\) được gọi là định thức con bù của của ma trận vuông cấp \\\(n - k\\\), được xác định bởi các phần tử không nằm trên giao của các dòng \\\(i_{1}, \dots , i_{k}\\\) và các cột \\\(j_{1}, \dots, j_{k}\\\). 
 
 
-Vậy nên, đối với trường hợp \\\(k = 1\\\) .....<!--Viêt sau-->
+Đối với trường hợp \\\(k = 1\\\), khai triển Laplace tổng quát chính là khai triển Laplace đã nêu ở phần **định lý 7.3**.
 
-**Ví dụ 7.6**: Tính định thức của ma trận cấp 4 sau: 
+<!--Viết tiếp: k = 1 thì đã đưa về định lý 7.3 như thế nào ?-->
+
+**Ví dụ 7.6**: Tính định thức của một ma trận cấp 4 sau: 
 
 $$
 B = \begin{bmatrix}
@@ -797,7 +840,7 @@ $$
 
 bằng cách sử dụng **khai triển Laplace tổng quát**.
 
-***Cách 1***: **Khai triển Laplace** theo dòng thứ 1, 2 ta được 
+***Cách 1***: Chọn dòng thứ 1, 2 để khai triển Laplace ta được: 
 
 $$
 \begin{equation}
@@ -827,9 +870,9 @@ $$
 
 Vậy định thức của ma trận vuông cấp 4 \\\(\det(B) = 32\\\)
 
-***Cách 2***: **Khai triển Laplace** theo cột thứ 1, 2. 
+***Cách 2***: Chọn cột thứ 1, 2 để khai triển Laplace: 
 
-Phần này tự áp dụng công thức rồi tính toán như ***cách 1*** trên nhé !
+( Phần này tự áp dụng công thức rồi tính toán như ***cách 1*** trên nhé ! )
 
 ***
 
