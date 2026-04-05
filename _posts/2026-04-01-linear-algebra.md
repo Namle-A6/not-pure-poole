@@ -101,7 +101,7 @@ Từ **định nghĩa 2.1** về ánh xạ, ta có các khái niệm về đơn 
 
 > (i) Ánh xạ *f* được gọi là ***đơn ánh*** nếu \\\(\forall x_1, x_2 \in X, x_1 \ne x_2\\\) kéo theo \\\(f(x_1) \ne f(x_2)\\\). Điều đó tương đương với: \\\(\forall x_1, x_2 \in X, f(x_1) = f(x_2)\\\) kéo theo \\\(x_1 = x_2\\\)
 
-> (ii) Ánh xạ *f* được gọi là ***toàn ánh*** nếu \\\(f(x) = y\\\), nghĩa là \\\(\forall \in Y\\\), \\\(\exists x \in X\\\) sao cho \\\(y =f(x)\\\). 
+> (ii) Ánh xạ *f* được gọi là ***toàn ánh*** nếu \\\(f(x) = y\\\), nghĩa là \\\(\forall y \in Y\\\), \\\(\exists x \in X\\\) sao cho \\\(y =f(x)\\\). 
 
 > (iii) Ánh xạ *f* được gọi là ***song ánh*** nếu ánh xạ *f* vừa là ***đơn ánh*** và đồng thời cũng là ***toàn ánh***.
 
@@ -186,13 +186,13 @@ $$\begin{cases}
 
 **Ví dụ 3.6**: Cho số phức \\\(z_1 = 3 + 4.i\\\): 
 
-Ta được số phức liên hợp từ số phức \\\(z_1\\\) là \\\(\overline{z_1} = 3 - 4.i\\\)
+Ta tìm được số phức liên hợp từ số phức \\\(z_1\\\) là \\\(\overline{z_1} = 3 - 4.i\\\)
 
 **Định nghĩa 3.7 (Mô đun số phức)**: Cho số phức \\\(z = a + b.i\\\), với \\\(a, b \in \mathbb{R}\\\):
 
 > Số thực không âm \\\(\lvert z \lvert = \sqrt{a^2 + b^2}\\\) được gọi là mô đun của số phức \\\(z\\\)
 
-Lấy lại **ví dụ 3.6** trên, ta được mô đun của số phức \\\(z_1\\\) là \\\(\lvert z_1 \lvert = \sqrt{3^2 + 4^2} = 5\\\). 
+Lấy lại **ví dụ 3.6** trên, ta tìm được mô đun của số phức \\\(z_1\\\) là \\\(\lvert z_1 \lvert = \sqrt{3^2 + 4^2} = 5\\\). 
 
 Mô đun của số phức liên hợp từ số phức \\\(z_1\\\) là \\\(\lvert \overline{z_1} \lvert\\\) cũng bằng 5 (= \\\(\sqrt{3^2 + (-4)^2}\\\)).
 
@@ -200,19 +200,163 @@ Mô đun của số phức liên hợp từ số phức \\\(z_1\\\) là \\\(\lve
 
 ## 4. Ma trận 
 
-. . . 
+**Định nghĩa 4.1**: Một ma trận có kích thước \\\(m \times n\\\) là một bảng số hình chữ nhật  gồm *m* hàng và *n* cột có dạng: 
+
+$$
+\begin{bmatrix}
+    a_{11} & a_{12} & \dots  & a_{1n} \\
+    a_{21} & a_{22} & \dots  & a_{2n} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    a_{m1} & a_{m2} & \dots  & a_{mn}
+\end{bmatrix}
+$$
+
+với \\\(a_{ij}\\\) là phần tử nằm ở giao dòng thứ *i* và cột thứ *j* của ma trận. 
+
+Nếu tất cả các phần tử \\\(a_{ij} \in \mathbb{R}\\\), thì ta gọi ma trận đó là một ma trận thực. Nếu tất cả các phần tử \\\(a_{ij} \in \mathbb{C}\\\), thì ta gọi ma trận đó là một ma trận phức. 
+
+Kí hiệu ma trận: \\\(A = (a_{ij})_{m \times n }\\\)
+
+**Ví dụ 4.2** Cho một ma trận \\\(B\\\)sau: 
+
+$$
+B = \begin{bmatrix}
+    1 & 2 & \sqrt{2} \\
+    4 & 8 & 10 \\
+\end{bmatrix}
+$$
+
+Ta thấy ma trận \\\(B\\\) trên là một ma trận có kích thước là \\\(2 \times 3\\\). Có các phần tử lần lượt là \\\(a_{11} = 1, a_{12} = 2, a_{13} = \sqrt{2}, a_{21} = 4, a_{22} = 8, a_{23} = 10\\\) đều thuộc tập \\\(\mathbb{R}\\\), nên ma trận \\\(B\\\) còn được gọi là ma trận thực.
+
+Kí hiệu ma trận \\\(B = (a_{ij})_{2 \times 3 }\\\). 
+
+**Nhận xét 4.3**: 
+
++ Ngoài kí hiệu ma trận là dấu ngoặc vuông, trong một số tài liệu đọc hoặc ghi chép, người ta cũng có thể kí hiệu ma trận là dấu ngoặc tròn. 
+
+$$
+\begin{pmatrix}
+    a_{11} & a_{12} & \dots  & a_{1n} \\
+    a_{21} & a_{22} & \dots  & a_{2n} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    a_{m1} & a_{m2} & \dots  & a_{mn}
+\end{pmatrix}
+$$
+
++ Ma trận thực có kích thước \\\(m \times n\\\), còn được kí hiệu là \\\(M_{m \times n}(\mathbb{R})) hoặc \\\(\mathbb{R}^{m \times n}\\\). Ma trận phức có kích thước \\\(m \times n\\\), còn được kí hiệu là \\\(M_{m \times n}(\mathbb{C})) hoặc \\\(\mathbb{C}^{m \times n}\\\)
+
++ Ma trận có kích thước \\\(n\times n\\\), tức là số dòng bằng số cột, được gọi là ma trận vuông cấp \\\(n\\\). Kí hiệu là \\\(A = (a_{ij})_{n \times n}\\\). 
+
+$$
+\begin{pmatrix}
+    a_{11} & a_{12} & \dots  & a_{1n} \\
+    a_{21} & a_{22} & \dots  & a_{2n} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    a_{n1} & a_{n2} & \dots  & a_{nn}
+\end{pmatrix}
+$$
+
++ Ma trận có kích thước \\\(1 \times n\\\), tức là ma trận chỉ có đúng một dòng, thì ta gọi ma trận đó là ma trận dòng. Kí hiệu là \\\(A = (a_{ij})_{1 \times n}\\\). 
+
+$$
+\begin{bmatrix}
+    a_{11} & a_{12} \dots & a_{1n}\\
+\end{bmatrix}
+$$
+
++ Ma trận có kích thước \\\(m \times 1\\\), tức là ma trận chỉ có đúng một cột, thì ta gọi ma trận đó là ma trận cột. Kí hiệu là \\\(A = (a_{ij})_{m \times 1}\\\). 
+
+$$
+\begin{bmatrix}
+    a_{11} \\
+    a_{21} \\ 
+    \vdots \\
+    a_{m1}
+\end{bmatrix}
+$$
+
++ Ma trận có kích thước \\\(m \times n\\\) có thể được viết lại từ ma trận dòng hoặc ma trận. 
+
+$$
+\begin{bmatrix}
+    a_{11} & a_{12} & \dots  & a_{1n} \\
+    a_{21} & a_{22} & \dots  & a_{2n} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    a_{m1} & a_{m2} & \dots  & a_{mn}
+\end{bmatrix} 
+
+=
+
+\begin{bmatrix}
+    col_1{M} & col_2{M} & \dots  & col_n{M} \\
+\end{bmatrix} 
+
+=
+\begin{bmatrix}
+    row_1{M} \\
+    row_2{M} \\
+    \vdots \\
+    row_m{M} 
+\end{bmatrix} 
+$$
+
+trong đó: 
+
+$$
+col_i{M} = \begin{bmatrix}
+    a_{1i} \\
+    a_{2i} \\ 
+    \vdots \\
+    a_{mi}
+\end{bmatrix}
+;
+row_i{M} = \begin{bmatrix}
+    a_{i1} & a_{i2} \dots & a_{in}\\
+\end{bmatrix}
+$$
+
+
+**Ví dụ 4.4**: Xét các ma trận sau đây: 
+
+$$
+A = \begin{bmatrix}
+1 \\
+2 \\
+3 \\
+4 \\
+\end{bmatrix}
+; 
+B= \begin{bmatrix}
+5 & 6 \\
+7 & 8 \\
+\end{bmatrix}
+; 
+C = \begin{bmatrix}
+9 & 10 & 11 & 12
+\end{bmatrix}
+$$
+
+ma trận nào trong đây là ma trận vuông, ma trận dòng, ma trận cột và xác định các giá trị phần tử của ma trận đó. 
+
+Ta thấy ma trận \\\(A\\\) có kích thước là \\\(4 \times 1\\\), nên đây là ma trận cột, có các phần tử là \\\(a_{11} = 1, a_{21} = 2, a_{31} = 3, a_{41} = 4.\\\)
+
+Tương tự ta có ma trận \\\(B\\\) có kích thước là \\\(2 \times 2\\\), nên đây là ma trận vuông cấp 2, có các phần tử là \\\(a_{11} = 5, a_{12} = 6, a_{21} = 7, a_{22} = 8\\\)
+
+Ma trận \\\(C\\\) có kích thước là \\\(1 \ times 4\\\), nên đây là ma trận dòng, có các phần tử là \\\(a_{11} = 9, a_{12} = 10, a_{13} = 11, a_{14} = 12\\\)
+
+Tiếp theo, ta cùng tìm hiểu về một số loại ma trận đặc biệt quan trọng mà ta thường bắt gặp ở các phần bài học tiếp theo trong bộ môn đại số tuyến tính. 
 
 *** 
 
 ## 5. Phép thế và dấu của phép thế
 
-**Định nghĩa 5.1 (phép thế)**: 
+**Định nghĩa 5.1 (phép thế)**: Cho \\\(X\\\) = {1, 2, \\\(\dots\\\), n} và n là một số nguyên dương: 
 
-> Cho n là một số nguyên dương. Mỗi song ánh từ tập hợp \\\(X\\\) = {1, 2, \\\(\dots\\\), n} vào chính nó được gọi là một phép thế cấp n. 
+> Mỗi song ánh từ tập hợp \\\(X\\\) = {1, 2, \\\(\dots\\\), n} vào chính nó được gọi là một phép thế cấp n. 
 
 Một phép thế cấp n còn được gọi là một phép thế bậc n hoặc là một hoán vị bậc n.
 
-Phép thế được kí hiệu bởi chữ cái Hy Lạp: \\\(\sigma\\\), \\\(\tau\\\), ...
+Phép thế được kí hiệu bởi chữ cái Hy Lạp: \\\(\sigma\\\) hoặc \\\(\tau\\\). 
 
 Tập hợp các phép cấp n được kí hiệu là \\\(S_n\\\),với số các phép cấp n là \\\(n!\\\). 
 
@@ -224,7 +368,16 @@ $$\sigma = \begin{pmatrix}
 \end{pmatrix}
 $$
 
-**Ví dụ 5.2**: Cho một ma trận vuông cỡ 2 \\\(\times\\\) 2. Ma trận vuông 2 \\\(\times\\\) 2 này có 2! = 2 phép thế cấp 2, đó là 
+**Ví dụ 5.2**: Cho một ma trận vuông cấp 2. 
+
+$$
+\begin{bmatrix}
+1 & 2 \\
+3 & 4
+\end{bmatrix}
+$$
+
+Ma trận vuông cấp 2 này có 2! = 2 phép thế cấp 2, đó là 
 
 $$\sigma_1 = 
 \begin{pmatrix}
@@ -239,9 +392,7 @@ $$\sigma_1 =
 \end{pmatrix} 
 $$
 
-**Định nghĩa 5.3 (dấu phép thế)**:   
-
-> Cho \\\(\sigma \in S_n\\\). Dấu của \\\(\sigma\\\), kí hiệu là \\\(sgn(\sigma)\\\), được xác định bởi:
+**Định nghĩa 5.3 (dấu phép thế)**: Cho \\\(\sigma \in S_n\\\). Dấu của \\\(\sigma\\\), kí hiệu là \\\(sgn(\sigma)\\\), được xác định bởi:
 
 $$
 \begin{equation}
@@ -301,7 +452,9 @@ Từ **định nghĩa 5.3** về dấu của phép thế trên, ta có một cá
 
 Áp dụng **định nghĩa 5.5** vào lại **ví dụ 5.4** trên ta được: 
 
-\\\((\sigma(i), \sigma(j))\\\) = {(5,4); (5,1); (5,2); (5,3); (4,2); (4,3)}
+$$
+(\sigma(i), \sigma(j)) = \{ (5,4); (5,1); (5,2); (5,3); (4,2); (4,3) \}
+$$
 
 Vì cặp \\\((\sigma(i), \sigma(j))\\\) có số lượng nghịch thế là chẵn, nên theo **(ii)** của **định nghĩa 5.5**, phép thế \\\(\sigma\\\) là phép thế chẵn, có dấu của phép thế \\\(sgn(\sigma) = 1\\\).
 
@@ -416,7 +569,7 @@ $$\begin{cases}
   \operatorname{sgn}(\sigma_2) = \operatorname{sgn}(\sigma_3) = \operatorname{sgn}(\sigma_6) = -1
 \end{cases}$$
 
-Từ đây, ta áp dụng công thức định thức ở **định nghĩa 6.1**: 
+Từ đây, áp dụng công thức định thức ở **định nghĩa 6.1** ta được: 
 
 $$
 \begin{equation}
@@ -425,22 +578,18 @@ $$
 
 \\
 
-&= \left[ \operatorname{sgn}(\sigma_1) a_{1\sigma_1} a_{2\sigma_2} a_{3\sigma_3} \right] + \left[ \operatorname{sgn}(\sigma_2) a_{1\sigma_1} a_{2\sigma_2} a_{3\sigma_3} \right] \\
+&= \left[ \operatorname{sgn}(\sigma_1) a_{1\sigma_1} a_{2\sigma_2} a_{3\sigma_3} \right] + \left[ \operatorname{sgn}(\sigma_2) a_{1\sigma_1} a_{2\sigma_2} a_{3\sigma_3} \right] + \left[ \operatorname{sgn}(\sigma_3) a_{1\sigma_1} a_{2\sigma_2} a_{3\sigma_3} \right]\\
 
-&\quad + \left[ \operatorname{sgn}(\sigma_3) a_{1\sigma_1} a_{2\sigma_2} a_{3\sigma_3} \right] + \left[ \operatorname{sgn}(\sigma_4) a_{1\sigma_1} a_{2\sigma_2} a_{3\sigma_3} \right]\\
-
-&\quad + \left[ \operatorname{sgn}(\sigma_5) a_{1\sigma_1} a_{2\sigma_2} a_{3\sigma_3} \right] + \left[ \operatorname{sgn}(\sigma_6) a_{1\sigma_1} a_{2\sigma_2} a_{3\sigma_3} \right]\\
+&\quad + \left[ \operatorname{sgn}(\sigma_4) a_{1\sigma_1} a_{2\sigma_2} a_{3\sigma_3} \right] + \left[ \operatorname{sgn}(\sigma_5) a_{1\sigma_1} a_{2\sigma_2} a_{3\sigma_3} \right] + \left[ \operatorname{sgn}(\sigma_6) a_{1\sigma_1} a_{2\sigma_2} a_{3\sigma_3} \right]\\
 
 \\
 
-&= (1.a_{11}.a_{22}.a_{33}) + ((-1).a_{11}.a_{23}.a_{32}) \\
-&\quad + ((-1).a_{12}.a_{21}.a_{33}) + (1.a_{12}.a_{23}.a_{31}) \\
-&\quad + (1.a_{13}.a_{21}.a_{32}) + ((-1).a_{13}.a_{22}.a_{31}) \\
+&= (1.a_{11}.a_{22}.a_{33}) + ((-1).a_{11}.a_{23}.a_{32}) + ((-1).a_{12}.a_{21}.a_{33})\\
+&\quad + (1.a_{12}.a_{23}.a_{31}) + (1.a_{13}.a_{21}.a_{32}) + ((-1).a_{13}.a_{22}.a_{31}) \\
 
 \\
 
-&= (a_{11}.a_{22}.a_{33} + a_{12}.a_{23}.a_{31} + a_{13}.a_{21}.a_{32}) \\
-&\quad - (a_{11}.a_{23}.a_{32} + a_{12}.a_{21}.a_{33} + a_{13}.a_{22}.a_{31})
+&= (a_{11}.a_{22}.a_{33} + a_{12}.a_{23}.a_{31} + a_{13}.a_{21}.a_{32}) - (a_{11}.a_{23}.a_{32} + a_{12}.a_{21}.a_{33} + a_{13}.a_{22}.a_{31})
 \end{aligned}
 \end{equation}
 $$
@@ -465,7 +614,8 @@ Một cách khác để tìm được định thức nhằm khắc phục hạn 
 
 Để bắt đầu với phần này, ta cần phải hiểu về phần bù đại số. 
 
-**Định nghĩa 7.1**: Cho \\\(A = (a_{ij})_{n \times n}\\\) là một ma trận vuông cấp \\\(n\\\), với \\\(1 \le i < j \le n\\\). 
+**Định nghĩa 7.1**: Cho \\\(A = (a_{ij})_{n \times n}\\\) là một ma trận vuông cấp \\\(n\\\), với \\\(1 \le i < j \le n\\\).
+
 Khi đó phần bù đại số của phần tử \\\(a_{ij}\\\), được cho bởi: 
 
 > $$A_{ij} = (-1)^{i + j} \cdot M_{ij}$$
@@ -474,7 +624,7 @@ trong đó:
 
 + \\\(M_{ij}\\\) là định thức của một ma trận vuông cấp \\\(n - 1\\\), nhận được từ ma trận \\\(A\\\) bằng cách bỏ đi dòng thứ \\\(i\\\) và cột thứ \\\(j\\\). 
 
-**Ví dụ 7.2**: Cho một ma trận \\\(3 \times 3\\\) sau: 
+**Ví dụ 7.2**: Cho một ma trận vuông cấp 3 sau: 
 
 $$
 B = \begin{bmatrix}
@@ -517,15 +667,15 @@ Vậy phần bù đại số của phần tử \\\(a_{23}\\\) là bằng 6.
 
 Từ đây, ta có thể tính được định thức của một ma trận từ các phần bù đại số của các phần tử thuộc cùng một dòng hoặc cùng một cột của ma trận thông qua định lý về **khai triển Laplace** sau. 
 
-**Định lý 7.3 (khai triển Laplace)**: Cho \\\(A = (a_{ij})_{n \times n}\\\) là một ma trận vuông cấp \\\(n\\\), với \\\(1 \le i < j \le n\\\): 
+**Định lý 7.3 (khai triển Laplace)**: Cho \\\(A = (a_{ij})_{n \times n}\\\) là một ma trận vuông cấp \\\(n\\\), với \\\(1 \le i < j \le n\\\):
 
-> (i) **(Khai triển Laplace theo dòng thứ i)**: Với mỗi \\\(i \in \{ 1, \dots ,n \}\\\) cố định ta có: 
+> (i) **(Khai triển Laplace theo dòng thứ i)**: Với mỗi dòng \\\(i \in\\\) { 1, ... ,n} cố định ta có: 
 
 $$
 \det(A) = \sum_{k=1}^{n} a_{ik} A_{ik} = \sum_{k=1}^{n} a_{ik} (-1)^{i + k} M_{ik}
 $$
 
-> (ii) **(Khai triển Laplace theo cột thứ j)**: Với mỗi \\\(i \in \{ 1, \dots ,n\ }\\\) cố định ta có: 
+> (ii) **(Khai triển Laplace theo cột thứ j)**: Với mỗi cột \\\(j \in\\\) { 1, ... ,n} cố định ta có: 
 
 $$
 \det(A) = \sum_{k=1}^{n} a_{kj} A_{kj} = \sum_{k=1}^{n} a_{kj} (-1)^{k + j} M_{kj}
@@ -533,7 +683,7 @@ $$
 
 **Ví dụ 7.4**: Tìm định thức của ma trận vuông cấp 3 từ **Ví dụ 6.2**, bằng cách sử dụng **khai triển Laplace** theo dòng hoặc cột.
 
-Ta có ma trận vuông \\\(3 \times 3\\\) 
+Ta có ma trận vuông cấp 3
 
 $$
 B = \begin{bmatrix}
@@ -543,7 +693,7 @@ B = \begin{bmatrix}
 \end{bmatrix}
 $$
 
-***Cách 1***: **Khai triển Laplace** theo dòng thứ 1, bằng cách áp dụng công thức từ (i) của **Định lý 7.3** ta được.  
+***Cách 1***: **Khai triển Laplace** theo dòng thứ nhất, bằng cách áp dụng công thức từ (i) của **Định lý 7.3** ta được.  
 
 $$
 \begin{equation}
@@ -570,13 +720,13 @@ $$
 \end{equation}
 $$
 
-Như vậy bằng cách **khai triển Laplace** theo dòng thứ 1 từ ma trận vuông cấp 3, định thức cấp 3 có được là: 
+Như vậy bằng cách **khai triển Laplace** theo dòng thứ nhát từ ma trận vuông cấp 3, định thức cấp 3 có được là: 
 
 $$
 det(B) =  (a_{11}.a_{22}.a_{33} + a_{12}.a_{23}.a_{31} + a_{13}.a_{21}.a_{32}) - (a_{11}.a_{23}.a_{32} + a_{12}.a_{21}.a_{33} + a_{13}.a_{22}.a_{31})
 $$
 
-***Cách 2***: **Khai triển Laplace** theo cột thứ 2, bằng cách áp dụng công thức từ (ii) của **Định lý 7.3** ta được.  
+***Cách 2***: **Khai triển Laplace** theo cột thứ hai, bằng cách áp dụng công thức từ (ii) của **Định lý 7.3** ta được.  
 
 $$
 \begin{equation}
@@ -603,7 +753,7 @@ $$
 \end{equation}
 $$
 
-Như vậy bằng cách **khai triển Laplace** theo cột thứ 2 từ ma trận vuông cấp 3, định thức cấp 3 có được cũng là: 
+Như vậy bằng cách **khai triển Laplace** theo cột thứ hai từ ma trận vuông cấp 3, định thức cấp 3 có được cũng là: 
 
 $$
 det(B) =  (a_{11}.a_{22}.a_{33} + a_{12}.a_{23}.a_{31} + a_{13}.a_{21}.a_{32}) - (a_{11}.a_{23}.a_{32} + a_{12}.a_{21}.a_{33} + a_{13}.a_{22}.a_{31})
@@ -629,10 +779,10 @@ trong đó:
 
 + \\\(D_{i_{1} \dots i_{k}}^{j_{1} \dots j_{k}}\\\) là định thức của ma trận vuông con cấp k, được xác định bởi các phần tử nằm trên giao của các dòng \\\(i_{1}, \dots , i_{k}\\\) và các cột \\\(j_{1}, \dots, j_{k}\\\).
 
-+ \\\( (-1)^{i_{1} + \dots + i_{k} + j_{1} + \dots + j_{k}} \overline{D}_{i_{1} \dots i_{k}}^{j_{1} \dots j_{k}} \\\) là phần bù đại số của \\\(D_{i_{1} \dots i_{k}}^{j_{1} \dots j_{k}} \\\). Với \\\(\overline{D}_{i_{1} \dots i_{k}}^{j_{1} \dots j_{k}}\\\) được gọi là định thức con bù của của ma trận vuông cấp \\\(n - k\\\), được xác định bởi các phần tử không nằm trên giao của các dòng \\(i_{1}, \dots , i_{k}\\\) và các cột \\\(j_{1}, \dots, j_{k}\\\). 
++ \\\( (-1)^{i_{1} + \dots + i_{k} + j_{1} + \dots + j_{k}} \overline{D}_{i_{1} \dots i_{k}}^{j_{1} \dots j_{k}} \\\) là phần bù đại số của \\\(D_{i_{1} \dots i_{k}}^{j_{1} \dots j_{k}} \\\). Với \\\(\overline{D}_{i_{1} \dots i_{k}}^{j_{1} \dots j_{k}}\\\) được gọi là định thức con bù của của ma trận vuông cấp \\\(n - k\\\), được xác định bởi các phần tử không nằm trên giao của các dòng \\\(i_{1}, \dots , i_{k}\\\) và các cột \\\(j_{1}, \dots, j_{k}\\\). 
 
 
-Đối với \\\(k = 1\\\) .....<!--Viêt sau-->
+Vậy nên, đối với trường hợp \\\(k = 1\\\) .....<!--Viêt sau-->
 
 **Ví dụ 7.6**: Tính định thức của ma trận cấp 4 sau: 
 
@@ -645,7 +795,7 @@ B = \begin{bmatrix}
 \end{bmatrix}
 $$
 
-bằng cách sử dụng **khai triển Laplace tổng quát**
+bằng cách sử dụng **khai triển Laplace tổng quát**.
 
 ***Cách 1***: **Khai triển Laplace** theo dòng thứ 1, 2 ta được 
 
@@ -683,7 +833,7 @@ Phần này tự áp dụng công thức rồi tính toán như ***cách 1*** tr
 
 ***
 
-## 8. Ma trận khả nghịch
+## 8. Ma trận nghịch đảo
 
 . . .
 
