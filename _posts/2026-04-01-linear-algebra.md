@@ -820,12 +820,7 @@ trong đó:
 
 + \\\(D_{i_{1} \dots i_{k}}^{j_{1} \dots j_{k}}\\\) là định thức của ma trận vuông con cấp k, được xác định bởi các phần tử nằm trên giao của các dòng \\\(i_{1}, \dots , i_{k}\\\) và các cột \\\(j_{1}, \dots, j_{k}\\\).
 
-+ \\\( (-1)^{i_{1} + \dots + i_{k} + j_{1} + \dots + j_{k}} \overline{D}_{i_{1} \dots i_{k}}^{j_{1} \dots j_{k}} \\\) là phần bù đại số của \\\(D_{i_{1} \dots i_{k}}^{j_{1} \dots j_{k}} \\\). Với \\\(\overline{D}_{i_{1} \dots i_{k}}^{j_{1} \dots j_{k}}\\\) được gọi là định thức con bù của của ma trận vuông cấp \\\(n - k\\\), được xác định bởi các phần tử không nằm trên giao của các dòng \\\(i_{1}, \dots , i_{k}\\\) và các cột \\\(j_{1}, \dots, j_{k}\\\). 
-
-
-Đối với trường hợp \\\(k = 1\\\), khai triển Laplace tổng quát chính là khai triển Laplace đã nêu ở phần **định lý 7.3**.
-
-<!--Viết tiếp: k = 1 thì đã đưa về định lý 7.3 như thế nào ?-->
++ \\\( (-1)^{i_{1} + \dots + i_{k} + j_{1} + \dots + j_{k}} \overline{D}_{i_{1} \dots i_{k}}^{j_{1} \dots j_{k}} \\\) là phần bù đại số của \\\(D_{i_{1} \dots i_{k}}^{j_{1} \dots j_{k}} \\\). Với \\\(\overline{D}_{i_{1} \dots i_{k}}^{j_{1} \dots j_{k}}\\\) được gọi là định thức con bù của ma trận vuông cấp \\\(n - k\\\), được xác định bởi các phần tử không nằm trên giao của các dòng \\\(i_{1}, \dots , i_{k}\\\) và các cột \\\(j_{1}, \dots, j_{k}\\\). 
 
 **Ví dụ 7.6**: Tính định thức của một ma trận cấp 4 sau: 
 
@@ -873,6 +868,22 @@ Vậy định thức của ma trận vuông cấp 4 \\\(\det(B) = 32\\\)
 ***Cách 2***: Chọn cột thứ 1, 2 để khai triển Laplace: 
 
 ( Phần này tự áp dụng công thức rồi tính toán như ***cách 1*** trên nhé ! )
+
+Đối với trường hợp \\\(k = 1\\\), khai triển Laplace tổng quát chính là khai triển Laplace đã nêu ở phần **định lý 7.3**.
+
+Với \\\(k = 1\\\), khai triển Laplace tổng quát cho dòng lúc này có được sẽ là: 
+
+$$
+det(A) = \sum_{i \leqslant j_{1}} (-1)^{i_{1} + j_{1}} \overline{D}_{i_{1}}^{j_{1}} D_{i_{1}}^{j_{1}}
+$$
+
+Chọn một dòng thứ \\\(i\\\) và một cột thứ \\\(j\\\), với \\\(j \in \\\) {1, ..., n}. Khi đó phần tử nằm trên giao một dòng thứ \\\(i\\\) và một cột thứ \\\(j\\\), chính là định thức của ma trận vuông con cấp 1 của ma trận chính hay \\\(D_{i_{1}}^{j_{1}}\\\) lúc này chính là \\\{a_{ij}\\\}. 
+
+Còn \\\(\overline{D}_{i_{1}}^{j_{1}} D_{i_{1}}^{j_{1}}\\\) là định thức con bù của ma trận vuông cấp \\\(n-1\\\) hay ta có thể viết lại thành \\\(M_{ij}\\\). 
+
+Từ đây, ta có công thức khai triển Laplace ở trường hợp \\\(k = 1\\\) theo dòng thứ \\\(\\\i\\\), chính là công thức mà ta đã nêu ở **định lý 7.3**. 
+
+Tương tự đối với \\\(k = 1\\\), khai triển Laplace tổng quát cho cột. 
 
 ***
 
