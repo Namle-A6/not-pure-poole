@@ -8,6 +8,7 @@ math: true
 toc:  true
 ---
 
+![](./img/banner.jpeg)
 
 Dựa trên hai cuốn sách mà mình tự học là "Giáo trình: Nhập môn lý thuyết ma trận" của Nhà xuất bản đại học sư phạm, "Toán học cao cấp (tập 1): Đại số và hình học giải tích" và "Toán học cao cấp (tập 2): Giải tích" của Nhà xuất bản giáo dục Việt Nam. 
 
@@ -877,13 +878,13 @@ $$
 det(A) = \sum_{i \leqslant j_{1}} (-1)^{i_{1} + j_{1}} \overline{D}_{i_{1}}^{j_{1}} D_{i_{1}}^{j_{1}}
 $$
 
-Chọn một dòng thứ \\\(i\\\) và một cột thứ \\\(j\\\), với \\\(j \in \\\) {1, ..., n}. Khi đó phần tử nằm trên giao một dòng thứ \\\(i\\\) và một cột thứ \\\(j\\\), chính là định thức của ma trận vuông con cấp 1 của ma trận chính hay \\\(D_{i_{1}}^{j_{1}}\\\) lúc này chính là \\\{a_{ij}\\\}. 
+Chọn một dòng thứ \\\(i\\\) và một cột thứ \\\(j\\\), với \\\(j \in \\\) {1, ..., n}. Khi đó phần tử nằm trên giao một dòng thứ \\\(i\\\) và một cột thứ \\\(j\\\), chính là định thức của ma trận vuông con cấp 1 của ma trận chính là \\\(D_{i_{1}}^{j_{1}}\\\) hay lúc này đây sẽ là \\\(a_{ij}\\\). 
 
-Còn \\\(\overline{D}_{i_{1}}^{j_{1}} D_{i_{1}}^{j_{1}}\\\) là định thức con bù của ma trận vuông cấp \\\(n-1\\\) hay ta có thể viết lại thành \\\(M_{ij}\\\). 
+Còn \\\(\overline{D}_{i_{1}}^{j_{1}} D_{i_{1}}^{j_{1}}\\\) là định thức con bù của ma trận vuông cấp \\\(n-1\\\) và ta có thể viết lại thành \\\(M_{ij}\\\). 
 
 Từ đây, ta có công thức khai triển Laplace ở trường hợp \\\(k = 1\\\) theo dòng thứ \\\(\\\i\\\), chính là công thức mà ta đã nêu ở **định lý 7.3**. 
 
-Tương tự đối với \\\(k = 1\\\), khai triển Laplace tổng quát cho cột. 
+Tương tự trường hợp \\\(k = 1\\\) đối với khai triển Laplace tổng quát cho cột. 
 
 ***
 
