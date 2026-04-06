@@ -4,7 +4,7 @@ title: Testing MathJax
 tags: mathjax
 math: true
 date: 2025-12-25 15:32 +0800
-last_modified_at: 2026-04-02 06:08:25 +0800
+last_modified_at: 2025-12-30 06:08:25 +0800
 ---
 Để viết các kí hiệu, phương trình toán học được hiển thị ở trang web, hãy sử dụng [MathJax](https://www.mathjax.org/). 
 

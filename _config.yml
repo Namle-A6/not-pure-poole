@@ -29,9 +29,9 @@ exclude:
 
 # Optimize Jekyl SEO Tag
 twitter:
-  username: vszhub
+  username: Namlete
   card: summary
-logo: logo.png
+logo: favicon.jpeg
 social:
   name: Namlete
   links:

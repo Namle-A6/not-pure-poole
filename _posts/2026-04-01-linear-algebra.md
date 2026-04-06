@@ -8,8 +8,6 @@ math: true
 toc:  true
 ---
 
-![banner](./img/banner.jpeg "Large example image")
-
 Dựa trên hai cuốn sách mà mình tự học là "Giáo trình: Nhập môn lý thuyết ma trận" của Nhà xuất bản đại học sư phạm, "Toán học cao cấp (tập 1): Đại số và hình học giải tích" và "Toán học cao cấp (tập 2): Giải tích" của Nhà xuất bản giáo dục Việt Nam. 
 
 ## 1. Lý thuyết tập hợp (hữu hạn)
