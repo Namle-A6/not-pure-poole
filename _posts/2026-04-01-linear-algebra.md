@@ -8,7 +8,7 @@ math: true
 toc:  true
 ---
 
-<img src="./img/banner.jpeg" width="600px">
+![banner](./img/banner.jpeg "Large example image")
 
 Dựa trên hai cuốn sách mà mình tự học là "Giáo trình: Nhập môn lý thuyết ma trận" của Nhà xuất bản đại học sư phạm, "Toán học cao cấp (tập 1): Đại số và hình học giải tích" và "Toán học cao cấp (tập 2): Giải tích" của Nhà xuất bản giáo dục Việt Nam. 
 
