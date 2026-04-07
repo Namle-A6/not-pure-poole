@@ -380,7 +380,7 @@ $$
 
 Tiếp theo, ta cùng tìm hiểu về một số loại ma trận đặc biệt quan trọng mà ta thường bắt gặp ở các phần bài học tiếp theo trong bộ môn đại số tuyến tính. 
 
-**Định nghĩa 4.7 (ma trận không)**: Cho \\\(A\\\) là một ma trận có kích thước \\\(m \times n\\\), với \\\(m,n \in \mathbb{N}\\\). Nếu tất cả các phần tử bên trong ma trận \\\(A\\\) đều bằng không, tức là \\\(a_{ij} = 0 \forall 1 \leqslant i \leqslant m, 1 \leqslant j \leqslant n\\\), thì ta nói ma trận \\\(A\\) lúc này là ma trận không. 
+**Định nghĩa 4.7 (ma trận không)**: Cho \\\(A\\\) là một ma trận có kích thước \\\(m \times n\\\), với \\\(m,n \in \mathbb{N}\\\). Nếu tất cả các phần tử bên trong ma trận \\\(A\\\) đều bằng không, tức là \\\(a_{ij} = 0\\\), \\\(\forall 1 \leqslant i \leqslant m, 1 \leqslant j \leqslant n\\\), thì ta nói ma trận \\\(A\\) lúc này là ma trận không. 
 
 $$
 \begin{bmatrix}
@@ -391,13 +391,13 @@ $$
 \end{bmatrix}
 $$
 
-Kí hiệu ma trận không kích thước \\\(m \times n): \\\(0_{m \times n}\\\) hoặc chỉ đơn giản là 0 (nếu đã được xác định rõ).
+Kí hiệu ma trận không kích thước \\\(m \times n\\\): \\\(0_{m \times n}\\\) hoặc chỉ đơn giản là 0 (nếu đã được xác định rõ).
 
 **Ví dụ 4.8**: 
 
 . . .
 
-**Định nghĩa 4.9 (ma trận đơn vị)**: Cho \\\(A\\\) là một ma trận vuông có kích thước \\\(n \times n\\\), với \\\(n \in \mathbb{N}\\\). Nếu đường chéo chính của ma trận có phần tử đều bằng 1 và các phần tử còn lại không nằm trên đường chéo chính đều bằng 0, tức là 
+**Định nghĩa 4.9 (ma trận đơn vị)**: Cho \\\(A\\\) là một ma trận vuông có kích thước \\\(n \times n\\\), với \\\(n \in \mathbb{N}\\\). Nếu đường chéo chính của ma trận có các phần tử đều bằng 1 và các phần tử còn lại không nằm trên đường chéo chính đều bằng 0, tức là 
 
 $$
 a_{ij} =  \begin{cases}
@@ -425,7 +425,7 @@ Kí hiệu ma trận đơn vị cấp \\\(n\\\): \\\(I_{n}\\\).
 
 . . . 
  
-**Định nghĩa 4.11 (ma trận chéo)** : Cho \\\(A\\\) là một ma trận vuông có kích thước \\\(n \times n\\\), với \\\(n \in \mathbb{N}\\\). Nếu ma trận có các phần tử không nằm trên đường chéo chính đều bằng 0, tức là \\\(a_{ij} = 0, \forall 1 \leqslant i \neq j \leqslant n\\\), thì ta nói ma trận \\\(A\\\) lúc này là ma trận chéo cấp \\\(n\\\).
+**Định nghĩa 4.11 (ma trận chéo)** : Cho \\\(A\\\) là một ma trận vuông có kích thước \\\(n \times n\\\), với \\\(n \in \mathbb{N}\\\). Nếu ma trận có các phần tử không nằm trên đường chéo chính đều bằng 0, tức là \\\(a_{ij} = 0\\\) , \\\(\forall 1 \leqslant i \neq j \leqslant n\\\), thì ta nói ma trận \\\(A\\\) lúc này là ma trận chéo cấp \\\(n\\\).
 
 $$
 \begin{bmatrix}
@@ -440,13 +440,13 @@ $$
 
 . . . 
 
-**Định nghĩa 4.13 (ma trận đối xứng)**: Cho \\\(A\\\) là một ma trận vuông có kích thước \\\(n \times n\\\), với \\\(n \in \mathbb{N}\\\). Nếu ma trận có các phần tử đối xứng qua đường chéo chính bằng nhau, tức là \\\(a_{ij} = a_{ji}, \forall 1 \leqslant i, j \leqslant n\\\), thì ta nói ma trận \\\(A\\\) lúc này là ma trận đối xứng cấp \\\(n\\\).
+**Định nghĩa 4.13 (ma trận đối xứng)**: Cho \\\(A\\\) là một ma trận vuông có kích thước \\\(n \times n\\\), với \\\(n \in \mathbb{N}\\\). Nếu ma trận có các phần tử đối xứng qua đường chéo chính bằng nhau, tức là \\\(a_{ij} = a_{ji}\\\), \\\(\forall 1 \leqslant i, j \leqslant n\\\), thì ta nói ma trận \\\(A\\\) lúc này là ma trận đối xứng cấp \\\(n\\\).
 
 **Ví dụ 4.14**: 
 
 . . . 
 
-**Định nghĩa 4.15 (ma trận tam giác trên/dưới)** Cho \\\(A\\\) là một ma trận vuông có kích thước \\\(n \times n\\\), với \\\(n \in \mathbb{N}\\\).
+**Định nghĩa 4.15 (ma trận tam giác trên/dưới)**: Cho \\\(A\\\) là một ma trận vuông có kích thước \\\(n \times n\\\), với \\\(n \in \mathbb{N}\\\).
 
 + Nếu ma trận có các phần tử \\\(a_{ij} = 0, \forall i > j \\\), thì ta nói ma trận lúc này là ma trận tam giác trên. 
 
