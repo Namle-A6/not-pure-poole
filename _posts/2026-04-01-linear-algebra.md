@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Đường đến giải hệ phương trình 
+title: Đường đến nghiệm của hệ phương trình tuyến tính
 date: 2026-03-01 05:14 +0800
 last_modified_at: 2026-04-02 06:08:25 +0800
 tags: [linear-algebra]
@@ -10,11 +10,19 @@ toc:  true
 
 Dựa trên hai cuốn sách mà mình tự học là "Giáo trình: Nhập môn lý thuyết ma trận" của Nhà xuất bản đại học sư phạm, "Toán học cao cấp (tập 1): Đại số và hình học giải tích" và "Toán học cao cấp (tập 2): Giải tích" của Nhà xuất bản giáo dục Việt Nam. 
 
+Ngoài ra mình còn tham khảo thêm một số tài liệu khác trên mạng mà người đọc có thể xem ở phần **"Tài liệu tham khảo thêm"** bên dưới bài viết. 
+
+Nếu như bạn đọc xem qua phần lý thuyết trong đây mà thấy thiếu, giả dụ khi đọc về phần **số phức** không thấy người viết nói về biểu diễn hình học và dạng lượng của số phức từ đó ta có công thức De Moivre. Thì cơ bản một điều rằng, các kiến thức ở đây chỉ nhằm phục vụ như tiêu đề là chỉ trình bày các định nghĩa, định lý, mệnh đề quan trọng dẫn đến con đường giải hệ phương trình chứ sẽ chưa tập trung chuyên sâu về một chủ đề của phần toán đó. 
+
+Tất nhiên bạn đọc sẽ thấy ở cuối mỗi phần bài học toán đó là sẽ dẫn đến phần bài học chuyên sâu của phần lý thuyết toán đó, nhằm đưa ra đầy đủ kiến thức cho khán giả. 
+
+Còn giờ ta hãy bắt đầu cuộc hành trình đi tìm cách để tìm nghiệm của hệ phương trình tuyến tính thôi nào !
+
 ## 1. Lý thuyết tập hợp (hữu hạn)
 
 **Định nghĩa 1.1**: 
 
-> Tập hợp là một khái niệm cơ bản không được định nghĩa, mà được hiểu như là một sự tụ tập những sự vật hoặc những đối tượng nhất định (và thường có cùng một hoặc một số tính chất chung nào đó). Mỗi sự vật hoặc đối tượng đó được gọi là một phần tử  của tập hợp. 
+> Tập hợp là một khái niệm cơ bản không được định nghĩa, mà được hiểu như là một sự tụ tập những sự vật hoặc những đối tượng nhất định (và thường có cùng một hoặc một số tính chất chung nào đó). Mỗi sự vật hoặc đối tượng đó được gọi là một phần tử của tập hợp. 
 
 **Ví dụ 1.2**: 
 
@@ -22,7 +30,7 @@ Tập hợp các số tự nhiên: 0, 1, 2, 3, ...
 
 Tập hợp các số nguyên: ...-1, -2, 0, 1, 2, ...
 
-Tập hợp thường được kí hiệu bởi các chữ cái in hoa, chẳng hạn như *X, Y, Z, ...* Phần tử thường được kí hiệu bởi chữ cái in thường *x, y, z, ...*
+Tập hợp thường được kí hiệu bởi các chữ cái in hoa, chẳng hạn như \\\(X, Y, Z, \dots\\\) Phần tử thường được kí hiệu bởi chữ cái in thường \\\(x, y, z, ...\\\). 
 
 **Ví dụ 1.3**:
 
@@ -195,7 +203,81 @@ Lấy lại **ví dụ 3.6** trên, ta tìm được mô đun của số phức 
 
 Mô đun của số phức liên hợp từ số phức \\\(z_1\\\) là \\\(\lvert \overline{z_1} \lvert\\\) cũng bằng 5 (= \\\(\sqrt{3^2 + (-4)^2}\\\)).
 
-. . .
+**Mệnh đề 3.8**: Cho \\\(\overline{z}\\\) là số phức liên hợp và \\\(\lvert z \lvert\\\\\\) là mô đun của số phức: 
+
+$$ 
+
+z \cdot \bar{z} = \lvert z \lvert ^2
+
+$$
+ 
+Tiếp theo, ta đến với các phép toán với số phức. 
+
+**Định nghĩa 3.9 (các phép toán với số phức)**: Cho hai số phức \\\(z_1 = a + b.i\\\) và \\\(z_2 = a' + b'.i\\\): 
+
+> (i) Phép cộng hai số phức được cho bởi: 
+
+$$
+\begin{equation}
+\begin{aligned}
+z_1 + z_2 &= (a + b.i) + (a' + b'.i) \\
+
+&= (a + a') + (b + b').i
+\end{aligned}
+\end{equation}
+$$
+
+> (ii) Phép trừ hai số phức được cho bởi: 
+
+$$
+\begin{equation}
+\begin{aligned}
+z_1 + z_2 &= (a + b.i) - (a' + b'.i) \\
+
+&= (a - a') + (b - b').i
+\end{aligned}
+\end{equation}
+$$
+
+> (iii) Phép nhân hai số phức được cho bởi: 
+
+$$
+\begin{equation}
+\begin{aligned}
+z_1 \cdot z_2 &= (a + b \cdot i) \cdot (a' + b' \cdot i) \\
+
+&= a \cdot a' + a \cdot b' \cdot i + b \cdot i \cdot a' + b \cdot i \cdot b' \cdot i \\
+
+&= (a \cdot a' - b \cdot b') + (a \cdot b' + a' \cdot b) \cdot i 
+\end{aligned}
+\end{equation}
+$$
+
+> (iv) Phép chia hai số phức được cho bởi: 
+
+$$
+\begin{equation}
+\begin{aligned}
+
+\frac{z_1}{z_2} &= \frac{a + b \cdot i}{a' + b' \cdot i} \\
+
+&= \frac{(a + b \cdot i) \cdot (a' - b' \cdot i)}{(a' + b' \cdot i) \cdot (a' - b' \cdot i)} \\
+
+&= \frac{a \cdot a' - a \cdot b' \cdot i + b \cdot i \cdot a'  - b \cdot i \cdot b' \cdot i }{(a')^2 - (b'i)^2} \\
+
+&= \frac{(a \cdot a' + b \cdot b') - (a \cdot b' - a' \cdot b).i}{(a')^2 + (b')^2} \\
+
+&= \frac{(a \cdot a' + b \cdot b')}{(a')^2 + (b')^2} - \frac{(a \cdot b' - a' \cdot b).i}{(a')^2 + (b')^2} =  \frac{(a \cdot a' + b \cdot b')}{(a')^2 + (b')^2} + \frac{(a' \cdot b - a \cdot b').i}{(a')^2 + (b')^2}
+
+\end{aligned}
+\end{equation}
+$$
+
+Ta nói thêm một chút về phép nhân hai số phức và phép chia hai số phức.  
+
+. . . <!--bổ sung sau-->
+
+
 
 *** 
 
