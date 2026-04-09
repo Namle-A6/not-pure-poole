@@ -298,7 +298,7 @@ với \\\(a_{ij}\\\) là phần tử nằm ở giao dòng thứ *i* và cột th
 
 Nếu tất cả các phần tử \\\(a_{ij} \in \mathbb{R}\\\), thì ta gọi ma trận đó là một ma trận thực. Nếu tất cả các phần tử \\\(a_{ij} \in \mathbb{C}\\\), thì ta gọi ma trận đó là một ma trận phức. 
 
-Kí hiệu ma trận: \\\(A = (a_{ij})_{m \times n }\\\)
+Kí hiệu ma trận: \\\(A = (a_{ij})_{m \times n}\\\)
 
 **Ví dụ 4.2** Cho một ma trận \\\(B\\\) sau: 
 
@@ -1182,7 +1182,7 @@ Từ đây ta có nhận xét sau.
 
 Trước khi đi vào tìm hiểu định nghĩa của hạng ma trận. Ta cần nhắc lại một kiến thức quan trọng đã được nêu trong phần bài học về **khai triển Laplace tổng quát** đó là định thức con của ma trận. 
 
-**Định nghĩa 9.1 (định thức con của ma trận)**: Cho \\\(A = a_{ij}_{m \times n}\\\) là một ma trận có kích thước \\\(m \times n\\\), với \\\(m, n \in \mathbb{N}\\\) và k là một số nguyên dương bất kì không vượt quá \\\(m, n\\\): 
+**Định nghĩa 9.1 (định thức con của ma trận)**: Cho \\\(A = (a_{ij})_{m \times n }\\\) là một ma trận có kích thước \\\(m \times n\\\), với \\\(m, n \in \mathbb{N}\\\) và k là một số nguyên dương bất kì không vượt quá \\\(m, n\\\): 
 
 > Ma trận vuông cấp \\\(k\\\) được tạo bởi các phần tử nằm trên \\\(k\\\) hàng và \\\(k\\\) cột nào đó của ma trận \\\(A\\\), ta gọi ma trận vuông cấp \\\(k\\\) đó là ma trận vuông con cấp \\\(k\\\) có định thức được gọi là định thức con cấp \\\(k\\\) của ma trận \\\(A\\\). 
 
@@ -1198,7 +1198,7 @@ B = \begin{bmatrix}
 \end{bmatrix}
 $$
 
-Giả sử, ta chọn 2 dòng đầu tiên (\\\(i = 1, 2\\\)) và 2 cột đầu tiên (\\\(j = 1, 3\\\)), ta được một ma trận vuông con cấp 2 có các phần tử nằm trên dòng 1, 2 và cột 1,3 là 
+Giả sử, ta chọn 2 dòng đầu tiên (\\\(i =\\\) {1 , 2}) và 2 cột đầu tiên (\\\(j = \\\) = {1 , 3} ), ta được một ma trận vuông con cấp 2 có các phần tử nằm trên dòng 1, 2 và cột 1, 3 là 
 
 $$
 \begin{bmatrix}
@@ -1228,13 +1228,13 @@ $$
 
 Trong đó 
 
-+ \\\(C^{k}_{m}\\\) là tổ hợp chập \\\(k\\\) dòng mà ta chọn bất kì của \\\(m\\\) dòng, với \\\(1 \leq k \led m\\\).   
++ \\\(C^{k}_{m}\\\) là tổ hợp chập \\\(k\\\) dòng mà ta chọn bất kì của \\\(m\\\) dòng, với \\\(1 \leqslant k \leqslant m\\\).   
 
 $$
 C^{k}_{m} = \frac{m!}{k! \cdot (m - k)!}
 $$
 
-+ \\\(C^{k}_{n}\\\) là tổ hợp chập \\\(k\\\) cột mà ta chọn bất kì của \\\(n\\\) cột, với \\\(1 \leq k \led n\\\).   
++ \\\(C^{k}_{n}\\\) là tổ hợp chập \\\(k\\\) cột mà ta chọn bất kì của \\\(n\\\) cột, với \\\(1 \leqslant k \leqslant n\\\).   
 
 $$
 C^{k}_{n} = \frac{n!}{k! \cdot (n - k)!}
@@ -1275,7 +1275,7 @@ $$
 
 Tiếp theo ta đến với phần quan trọng của bài học này là hạng của ma trận.
 
-**Định nghĩa 9.4 (hạng ma trận)**:  Cho \\\(A = a_{ij}_{m \times n}\\\) là một ma trận có kích thước \\\(m \times n\\\), với \\\(m, n \in \mathbb{N}\\\) và k là một số nguyên dương bất kì không vượt quá \\\(m, n\\\): 
+**Định nghĩa 9.4 (hạng ma trận)**:  Cho \\\(A = (a_{ij})_{m \times n }\\\) là một ma trận có kích thước \\\(m \times n\\\), với \\\(m, n \in \mathbb{N}\\\) và k là một số nguyên dương bất kì không vượt quá \\\(m, n\\\): 
 
 > Hạng của ma trận A là cấp cao nhất của định thức con cấp k khác 0 của ma trận \\\(A\\\)
 
@@ -1287,7 +1287,7 @@ Tiếp tục với ví dụ **ví dụ 9.2** trên ta thấy.
 
 Ta không thể xét trường hợp \\\(k = 4\\\) vì ma trận \\\(B\\\) chỉ có 3 dòng.
 
-Xét trường hợp \\\(k = 3)\\\, ma trận \\\(B\\\) có tất cả 
+Xét trường hợp \\\(k = 3\\\), ma trận \\\(B\\\) có tất cả 
 
 $$
 C^{3}_{3} \cdot C^{3}_{4} = \frac{3!}{3! \cdot (3 - 3)!} \cdot \frac{4!}{3! \cdot (4 - 3)!} = 4
@@ -1304,19 +1304,19 @@ $$
 5 & 6 & 7 \\
 0 & 9 & 1
 \end{vmatrix}
-;
+,
 \begin{vmatrix}
 1 & 3 & 4 \\
 5 & 7 & 8 \\
 0 & 1 & 1
 \end{vmatrix}
-;
+,
 \begin{vmatrix}
 1 & 2 & 4 \\
 5 & 6 & 8 \\
 0 & 9 & 1
 \end{vmatrix}
-;
+,
 \begin{vmatrix}
 2 & 3 & 4 \\
 6 & 7 & 8 \\
@@ -1336,7 +1336,7 @@ det(
 0 & 9 & 1
 \end{vmatrix}
 ) = 68
-; 
+,
 
 det(
 \begin{vmatrix}
@@ -1346,7 +1346,7 @@ det(
 \end{vmatrix} 
 ) = 4
 
-;
+,
 
 det(
 \begin{vmatrix}
@@ -1356,7 +1356,7 @@ det(
 \end{vmatrix} 
 ) = 104   
 
-;
+,
 
 det(
 \begin{vmatrix}
