@@ -12,9 +12,9 @@ Dựa trên hai cuốn sách mà mình tự học là "Giáo trình: Nhập môn
 
 Ngoài ra mình còn tham khảo thêm một số tài liệu khác trên mạng mà người đọc có thể xem ở phần **"Tài liệu tham khảo thêm"** bên dưới bài viết. 
 
-Nếu như bạn đọc xem qua phần lý thuyết trong đây mà thấy thiếu, giả dụ khi đọc về phần **số phức** không thấy người viết nói về biểu diễn hình học và dạng lượng của số phức từ đó ta có công thức De Moivre. Thì cơ bản một điều rằng, các kiến thức ở đây chỉ nhằm phục vụ như tiêu đề là chỉ trình bày các định nghĩa, định lý, mệnh đề quan trọng dẫn đến con đường giải hệ phương trình chứ sẽ chưa tập trung chuyên sâu về một chủ đề của phần toán đó. 
+Nếu như bạn đọc xem qua phần lý thuyết trong đây mà thấy thiếu, giả dụ khi đọc về phần **số phức** không thấy người viết nói về biểu diễn hình học và dạng lượng của số phức từ đó ta có công thức De Moivre chẳng hạn. Thì cơ bản một điều rằng, các kiến thức ở đây chỉ nhằm phục vụ như tiêu đề là chỉ trình bày các định nghĩa, định lý, mệnh đề quan trọng dẫn đến con đường giải hệ phương trình chứ sẽ chưa tập trung chuyên sâu về một chủ đề của phần toán đó. 
 
-Tất nhiên bạn đọc sẽ thấy ở cuối mỗi phần bài học toán đó là sẽ dẫn đến phần bài học chuyên sâu của phần lý thuyết toán đó, nhằm đưa ra đầy đủ kiến thức cho khán giả. 
+Tất nhiên bạn đọc sẽ thấy ở cuối mỗi phần bài học toán đó là sẽ dẫn đến phần bài học chuyên sâu của phần lý thuyết toán đó, nhằm đưa ra đầy đủ kiến thức cho người đọc. 
 
 Còn giờ ta hãy bắt đầu cuộc hành trình đi tìm cách để tìm nghiệm của hệ phương trình tuyến tính thôi nào !
 
