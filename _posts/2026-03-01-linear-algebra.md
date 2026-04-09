@@ -12,9 +12,9 @@ Dựa trên hai cuốn sách mà mình tự học là "Giáo trình: Nhập môn
 
 Ngoài ra mình còn tham khảo thêm một số tài liệu khác trên mạng mà người đọc có thể xem ở phần **"Tài liệu tham khảo thêm"** bên dưới bài viết. 
 
-Nếu như bạn đọc xem qua phần lý thuyết trong đây mà thấy thiếu, giả dụ khi đọc về phần **số phức** không thấy người viết nói về biểu diễn hình học và dạng lượng của số phức từ đó ta có công thức De Moivre chẳng hạn. Thì cơ bản một điều rằng, các kiến thức ở đây chỉ nhằm phục vụ như tiêu đề là chỉ trình bày các định nghĩa, định lý, mệnh đề quan trọng dẫn đến con đường giải hệ phương trình chứ sẽ chưa tập trung chuyên sâu về một chủ đề của phần toán đó. 
+Nếu như bạn đọc xem qua phần lý thuyết trong đây mà thấy thiếu, giả dụ khi đọc về phần **số phức** không thấy người viết nói về biểu diễn hình học và dạng lượng của số phức từ đó ta có công thức De Moivre chẳng hạn. Thì cơ bản một điều rằng, các kiến thức ở đây chỉ nhằm phục vụ như tiêu đề là chỉ trình bày các định nghĩa, định lý, mệnh đề, nhận xét quan trọng dẫn đến con đường giải hệ phương trình chứ sẽ chưa tập trung chuyên sâu về một chủ đề của phần toán đó. 
 
-Tất nhiên bạn đọc sẽ thấy ở cuối mỗi phần bài học toán đó là sẽ dẫn đến phần bài học chuyên sâu của phần lý thuyết toán đó, nhằm đưa ra đầy đủ kiến thức cho người đọc. 
+Tất nhiên bạn đọc sẽ thấy ở cuối mỗi phần bài học toán đó là sẽ dẫn đến phần bài học chuyên sâu của phần lý thuyết toán đó, nhằm đưa ra đầy đủ kiến thức cho người. 
 
 Còn giờ ta hãy bắt đầu cuộc hành trình đi tìm cách để tìm nghiệm của hệ phương trình tuyến tính thôi nào !
 
@@ -900,9 +900,9 @@ $$
 \det(A) = \sum_{k=1}^{n} a_{kj} A_{kj} = \sum_{k=1}^{n} a_{kj} (-1)^{k + j} M_{kj}
 $$
 
-**Ví dụ 7.4**: Tìm định thức của ma trận vuông cấp 3 từ **Ví dụ 6.2**, bằng cách sử dụng **khai triển Laplace** theo dòng hoặc cột.
+**Ví dụ 7.4**: Tìm định thức của ma trận vuông cấp 3 từ **ví dụ 6.2** trên, bằng cách sử dụng **khai triển Laplace** theo dòng hoặc cột.
 
-Ta có ma trận vuông cấp 3
+Ta có ma trận vuông cấp 3 từ **ví dụ 6.2** là
 
 $$
 B = \begin{bmatrix}
@@ -1180,7 +1180,198 @@ Từ đây ta có nhận xét sau.
 
 ## 9. Hạng của ma trận
 
-. . . 
+Trước khi đi vào tìm hiểu định nghĩa của hạng ma trận. Ta cần nhắc lại một kiến thức quan trọng đã được nêu trong phần bài học về **khai triển Laplace tổng quát** đó là định thức con của ma trận. 
+
+**Định nghĩa 9.1 (định thức con của ma trận)**: Cho \\\(A = a_{ij}_{m \times n}\\\) là một ma trận có kích thước \\\(m \times n\\\), với \\\(m, n \in \mathbb{N}\\\) và k là một số nguyên dương bất kì không vượt quá \\\(m, n\\\): 
+
+> Ma trận vuông cấp \\\(k\\\) được tạo bởi các phần tử nằm trên \\\(k\\\) hàng và \\\(k\\\) cột nào đó của ma trận \\\(A\\\), ta gọi ma trận vuông cấp \\\(k\\\) đó là ma trận vuông con cấp \\\(k\\\) có định thức được gọi là định thức con cấp \\\(k\\\) của ma trận \\\(A\\\). 
+
+**Ví dụ 9.2**: Cho một ma trận \\\(B\\\) có kích thước là \\\(3 \times 4\\\) sau: 
+
+$$
+B = \begin{bmatrix}
+
+1 & 2 & 3 & 4\\
+5 & 6 & 7 & 8 \\
+0 & 9 & 1 & 1
+
+\end{bmatrix}
+$$
+
+Giả sử, ta chọn 2 dòng đầu tiên (\\\(i = 1, 2\\\)) và 2 cột đầu tiên (\\\(j = 1, 3\\\)), ta được một ma trận vuông con cấp 2 có các phần tử nằm trên dòng 1, 2 và cột 1,3 là 
+
+$$
+\begin{bmatrix}
+
+1 & 3 \\
+5 & 7
+
+\end{bmatrix}
+$$
+
+Định thức con cấp 2 của ma trận vuông con này là
+
+$$
+det(\begin{vmatrix}
+
+1 & 3 \\
+5 & 7
+
+\end{vmatrix}) = 1 \cdot 7 - 3 \cdot 5 = -8
+$$
+
+**Nhận xét 9.3**: Cứ lấy \\\(k\\\) hàng và \\\(k\\\) cột của ma trận \\\(A\\\), ta sẽ có một định thức cấp \\\(k\\\). Vậy ma trận \\\(A\\\) có 
+
+> $$C^{k}_{m} \cdot C^{k}_{n}$$
+
+định thức con cấp \\\(k\\\)
+
+Trong đó 
+
++ \\\(C^{k}_{m}\\\) là tổ hợp chập \\\(k\\\) dòng mà ta chọn bất kì của \\\(m\\\) dòng, với \\\(1 \leq k \led m\\\).   
+
+$$
+C^{k}_{m} = \frac{m!}{k! \cdot (m - k)!}
+$$
+
++ \\\(C^{k}_{n}\\\) là tổ hợp chập \\\(k\\\) cột mà ta chọn bất kì của \\\(n\\\) cột, với \\\(1 \leq k \led n\\\).   
+
+$$
+C^{k}_{n} = \frac{n!}{k! \cdot (n - k)!}
+$$
+
+Lấy lại đề bài từ **ví dụ 9.2** trên ta thấy. 
+
+Khi chọn k = 2, tức là chọn 2 dòng và 2 cột từ ma trận \\\(B\\\), lúc này ma trận \\\(B\\\) có tất cả là 
+
+$$
+C^{2}_{3} \cdot C^{2}_{4} = \frac{3!}{2! \cdot (3 - 2)!} \cdot \frac{4!}{2! \cdot (4 - 2)!} = 18
+$$
+
+định thức con cấp 2. 
+
+Ta có thể liệt kê một vài định thức con cấp 2 từ tất cả 18 định thức con cấp 2 của ma trận \\\(B\\\) sau đây. 
+
+$$
+\{ 
+\begin{vmatrix}
+1 & 3 \\
+5 & 7
+\end{vmatrix}
+; 
+\begin{vmatrix}
+1 & 2 \\
+5 & 6
+\end{vmatrix}
+; 
+\begin{bmatrix}
+2 & 3 \\
+9 & 1
+\end{bmatrix}
+; 
+\dots    
+\}
+$$
+
+Tiếp theo ta đến với phần quan trọng của bài học này là hạng của ma trận.
+
+**Định nghĩa 9.4 (hạng ma trận)**:  Cho \\\(A = a_{ij}_{m \times n}\\\) là một ma trận có kích thước \\\(m \times n\\\), với \\\(m, n \in \mathbb{N}\\\) và k là một số nguyên dương bất kì không vượt quá \\\(m, n\\\): 
+
+> Hạng của ma trận A là cấp cao nhất của định thức con cấp k khác 0 của ma trận \\\(A\\\)
+
+Kí hiệu hạng của ma trận \\\(A\\\) là \\\(rank(A)\\\)
+
+Từ **định nghĩa 9.4**, ta có thể hiểu rằng, \\\(rank(A) = k\\\), khi và chỉ khi có một định thức con cấp \\\(k\\\) khác 0 và mọi định thức con cấp cao hơn \\\(k\\\) đều bằng 0. 
+
+Tiếp tục với ví dụ **ví dụ 9.2** trên ta thấy. 
+
+Ta không thể xét trường hợp \\\(k = 4\\\) vì ma trận \\\(B\\\) chỉ có 3 dòng.
+
+Xét trường hợp \\\(k = 3)\\\, ma trận \\\(B\\\) có tất cả 
+
+$$
+C^{3}_{3} \cdot C^{3}_{4} = \frac{3!}{3! \cdot (3 - 3)!} \cdot \frac{4!}{3! \cdot (4 - 3)!} = 4
+$$
+
+định thức con cấp 3. 
+
+Ta có thể liệt kê tất cả 4 định thức con cấp 3 của ma trận \\\(B\\\) sau đây. 
+
+$$
+\{
+\begin{vmatrix}
+1 & 2 & 3 \\
+5 & 6 & 7 \\
+0 & 9 & 1
+\end{vmatrix}
+;
+\begin{vmatrix}
+1 & 3 & 4 \\
+5 & 7 & 8 \\
+0 & 1 & 1
+\end{vmatrix}
+;
+\begin{vmatrix}
+1 & 2 & 4 \\
+5 & 6 & 8 \\
+0 & 9 & 1
+\end{vmatrix}
+;
+\begin{vmatrix}
+2 & 3 & 4 \\
+6 & 7 & 8 \\
+9 & 1 & 1
+\end{vmatrix}
+\}
+$$
+
+Và khi ta tính tất cả bốn định thức con cấp 3 trên 
+
+$$
+
+det(
+\begin{vmatrix}
+1 & 2 & 3 \\
+5 & 6 & 7 \\
+0 & 9 & 1
+\end{vmatrix}
+) = 68
+; 
+
+det(
+\begin{vmatrix}
+1 & 3 & 4 \\
+5 & 7 & 8 \\
+0 & 1 & 1
+\end{vmatrix} 
+) = 4
+
+;
+
+det(
+\begin{vmatrix}
+1 & 2 & 4 \\
+5 & 6 & 8 \\
+0 & 9 & 1
+\end{vmatrix} 
+) = 104   
+
+;
+
+det(
+\begin{vmatrix}
+2 & 3 & 4 \\
+6 & 7 & 8 \\
+9 & 1 & 1
+\end{vmatrix}  
+) = -32
+$$
+
+ta thấy kết quả từ việc tính tất cả các định thức con cấp 3 của ma trận \\\(B\\\) có được đều là khác 0. 
+
+Dựa vào **định nghĩa 9.4**, ta có thể kết luận rằng, hạng của ma trận \\\(B\\\) có được là bằng 3. Viết lại là \\\(rank(B) = 3\\\).
+
+Ta quy ước hạng của ma trận 0 là bằng 0. Viết lại là \\\(rank(0) = 0\\\).
 
 ***
 

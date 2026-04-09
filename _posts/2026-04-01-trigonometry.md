@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Lượng giác 
-date: 2026-01-20 05:14 +0800
+date: 2026-04-01 05:14 +0800
 last_modified_at: 2026-02-10 06:08:25 +0800
 tags: [trigonometry]
 math: true

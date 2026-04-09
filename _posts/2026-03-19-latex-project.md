@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dự án thư viên LaTex (phiên bản v0.1-beta ) 
-date: 2026-01-20 05:14 +0800
+date: 2026-03-19 05:14 +0800
 tags: [latex]
 math: true
 ---
