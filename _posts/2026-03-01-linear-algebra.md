@@ -1195,9 +1195,9 @@ C \cdot D &= \begin{bmatrix}
 
 $$ 
 
-Vậy ta có thể kết luận rằng ma trận vuông \\\(C\\\) cấp \\\(2\\\) là một ma trận khả nghịch, còn ma trận vuông \\\(D\\\) cấp \\\(2\\\) là một ma trận nghịch đảo.
+Vậy ta có thể kết luận rằng, ma trận vuông \\\(C\\\) cấp \\\(2\\\) là một ma trận khả nghịch, còn ma trận vuông \\\(D\\\) cấp \\\(2\\\) là một ma trận nghịch đảo.
 
-Vậy làm sao để ta xác định được một ma trận vuông cấp \\\(n\\\) có hay không phải là một ma trận khả nghịch có ma trận nghịch đảo ? 
+Vậy làm sao để ta xác định được một ma trận vuông cấp \\\(n\\\) có hay không phải là một ma trận khả nghịch, để từ đó ta cũng xác định được ma trận đó có ma trận nghịch đảo ? 
 
 Có cách rất nhiều cách khác nhau để làm được điều đấy, tuy vậy chỉ trong khuôn khổ mục tiêu **đường đến giải hệ phương trình** đây, sẽ chỉ giới thiệu nhanh hai cách thân thuộc và dễ dàng. Phần mở rộng cách có hẳn một chuyên đề riêng để tổng hợp nhiều cách độc đáo khác nhau để giúp chúng ta có thể mở rộng cách giải quyết vấn đề mà ta đang bàn đây. 
 
@@ -1206,6 +1206,8 @@ Cách đầu tiên là bằng phương pháp ***biến đổi sơ cấp***.
 . . . 
 
 Cách thứ hai là bằng cách sử dụng các ***phần bù đại số***.
+
+<!--Định lý 8.5 (ma trận nghịch đảo)-->
 
 **Định lý 8.5 (ma trận nghịch đảo)**: Cho ma trận vuông \\\(\tilde{A}\\\) cấp \\\(n\\\) sau:
 
@@ -1223,10 +1225,10 @@ A_{m1} & A_{m2} & \dots & A_{mn}
 \end{bmatrix}
 $$
 
-trong đó phần tử \\\(A_{ij}\\\) của ma trận \\\(\tilde{A}\\\) chính là phần bù đại số của phần tử \\\(a_{ij}\\\) của ma trận \\\(A\\\), thì ma trận nghịch đảo của \\\(A\\\) là \\\(A^{-1}\\\) được cho bởi: 
+trong đó phần tử \\\(A_{ij}\\\) của ma trận \\\(\tilde{A}\\\) chính là phần bù đại số của phần tử \\\(a_{ij}\\\) của ma trận \\\(A\\\). Lúc này ma trận nghịch đảo của \\\(A\\\) là \\\(A^{-1}\\\) được cho bởi: 
 
 $$
-A^{-1} = \frac{1}{det(A)} \tilde{A} = \frac{1}{det(A)} \begin{bmatrix}
+A^{-1} = \frac{1}{det(A)} \tilde{A}^T = \frac{1}{det(A)} \begin{bmatrix}
 
 A_{11} & A_{12} & \dots & A_{1n} \\
 
@@ -1241,16 +1243,18 @@ $$
  
 Từ đây ta có nhận xét sau. 
 
-**Nhận xét 8.6 (ma trận khả nghịch)**: 
+<!--Nhận xét 8.6 (ma trận nghịch đảo)-->
 
-> Nếu ma trận vuông \\\(A\\\) có định thức khác 0 (\\\(det(A) \neq 0\\\)) thì \\\(A\\\) là ma trận khả nghịch. 
+**Nhận xét 8.6**: 
 
-> Nếu ma trận vuông \\\(A\\\) có định thức bằng 0 (\\\(det(A) = 0\\\)) thì \\\(A\\\) không phải là ma trận khả nghịch. 
+> Nếu ma trận vuông \\\(A\\\) có định thức khác 0 (\\\(det(A) \neq 0\\\)) thì \\\(A^{-1}\\\) là ma trận nghịch đảo. 
+
+> Nếu ma trận vuông \\\(A\\\) có định thức bằng 0 (\\\(det(A) = 0\\\)) thì \\\(A^{-1}\\\) không phải là ma trận nghịch đảo. 
 
 
 **Ví dụ 8.7**: <!--phải viết cách 1 thì từ dấy mới lấy ví dụ đó tính luôn cho ví dụ 8.7 đây-->   
 
-... 
+. . . 
 
 ***
 
@@ -1274,7 +1278,7 @@ B = \begin{bmatrix}
 \end{bmatrix}
 $$
 
-Giả sử, ta chọn 2 dòng đầu tiên (\\\(i =\\\) {1 , 2}) và 2 cột đầu tiên (\\\(j = \\\) = {1 , 3} ), ta được một ma trận vuông con cấp 2 có các phần tử nằm trên dòng 1, 2 và cột 1, 3 là 
+Giả sử, ta chọn 2 dòng đầu tiên (\\\(i =\\\) {1 , 2}) và 2 cột đầu tiên (\\\(j = \\\) {1 , 3} ), ta được một ma trận vuông con cấp 2 có các phần tử nằm trên dòng 1, 2 và cột 1, 3 là 
 
 $$
 \begin{bmatrix}
@@ -1285,7 +1289,7 @@ $$
 \end{bmatrix}
 $$
 
-Định thức con cấp 2 của ma trận vuông con này là
+Định thức của ma trận vuông con cấp 2 này là
 
 $$
 det(\begin{vmatrix}
@@ -1466,3 +1470,12 @@ Một cách khác để tìm hạng của ma trận ngoài định nghĩa trên 
 ## 10. Hệ phương trình tuyến tính
 
 . . . 
+
+$$
+\begin{equation}
+  \sum_{n=1}^\infty 1/n^2 = \frac{\pi^2}{6}
+  \label{eq:series}
+\end{equation}
+$$
+
+We can reference the equation as \eqref{eq:series}.
